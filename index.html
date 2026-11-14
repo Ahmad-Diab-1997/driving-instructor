@@ -1,0 +1,1657 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatic Driving Lessons in Liverpool | Ahmad, Driving Instructor</title>
+<meta name="description" content="Automatic driving lessons in Liverpool with Ahmad, a local instructor who knows the roads, the traffic and the test routes. Patient lessons for beginners and nervous drivers.">
+<meta name="theme-color" content="#0E0F11">
+<link rel="icon" href="favicon.svg?v=ad" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<!-- Until the own domain is live: keep the temporary address out of search results. Remove this line and add the canonical URL then. -->
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Automatic Driving Lessons in Liverpool | Ahmad, Driving Instructor">
+<meta property="og:description" content="Learn to drive with Ahmad, a local instructor who knows Liverpool's roads and test routes.">
+<meta property="og:image" content="images/icon.jpeg">
+<meta property="og:locale" content="en_GB">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" type="image/webp" href="images/opt/car-cutout-1200.webp"
+      imagesrcset="images/opt/car-cutout-720.webp 720w, images/opt/car-cutout-1200.webp 993w"
+      imagesizes="(max-width: 900px) 100vw, 58vw" fetchpriority="high">
+
+<!-- Structured data for search engines. Add "url" once the own domain is live. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DrivingSchool",
+  "name": "Ahmad, Driving Instructor",
+  "telephone": "+447982976744",
+  "email": "ahmed.dandoush123@gmail.com",
+  "image": "images/icon.jpeg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Liverpool",
+    "addressRegion": "Merseyside",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Liverpool"],
+  "sameAs": ["https://www.instagram.com/ahmed.adi1l/", "https://www.tiktok.com/@ahmed.adi40"]
+}
+</script>
+
+<style>
+/* =========================================================
+   Ahmad · design tokens
+   Palette taken from the tuition car: metallic crimson body,
+   piano-black grille, white roof sign, silver alloys.
+   ========================================================= */
+:root {
+  --ink: #0E0F11;
+  --ink-2: #16181B;
+  --ink-3: #202328;
+  --paper: #F4F2EE;
+  --paper-2: #E9E6E0;
+  --white: #FFFFFF;
+  --red: #C4142B;          /* body colour, 6:1 on white */
+  --red-deep: #8E0C1E;     /* shadow side of the paint */
+  --red-hi: #EB3A4F;       /* highlight, used on dark only (4.7:1 on ink) */
+  --silver: #C9CDD3;
+  --mist: #9AA0A8;         /* muted text on dark, 7:1 */
+  --stone: #555A62;        /* muted text on paper, 6.4:1 */
+  --line: rgba(14, 15, 17, .14);
+  --line-dark: rgba(255, 255, 255, .13);
+
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+
+  --gutter: clamp(16px, 4vw, 64px);
+  --max: 1360px;
+  --section: clamp(5rem, 11vw, 10rem);
+  --r-s: 6px;
+  --r-m: 14px;
+  --r-l: clamp(18px, 2.4vw, 32px);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-io: cubic-bezier(.65, 0, .35, 1);
+  --header-h: 80px;
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; }
+p { margin: 0 0 1em; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4 {
+  font-family: var(--display); font-stretch: 104%; font-weight: 800;
+  line-height: .94; letter-spacing: -.035em; margin: 0; text-wrap: balance;
+}
+h2 { font-size: clamp(2.5rem, 5.4vw, 5rem); }
+h3 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); letter-spacing: -.025em; line-height: 1; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+.dark :focus-visible, .site-header :focus-visible, .book :focus-visible { outline-color: var(--white); }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; margin: -1px;
+}
+.skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 100;
+  background: var(--white); color: var(--ink); padding: .6rem 1rem; border-radius: var(--r-s);
+  font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.4vw, 2.5rem); }
+.dark { background: var(--ink); color: var(--paper); }
+.lede { font-size: clamp(1.125rem, 1.45vw, 1.3rem); line-height: 1.55; max-width: 34em; }
+.muted { color: var(--stone); }
+.dark .muted { color: var(--mist); }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .75rem;
+  font-family: var(--display); font-stretch: 118%; font-weight: 700;
+  font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+  margin-bottom: clamp(1.25rem, 2.4vw, 2rem);
+}
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--red); }
+.dark .eyebrow::before { background: var(--red-hi); }
+
+/* Placeholder marker: anything in .ph needs real business information */
+.ph {
+  background: rgba(196, 20, 43, .09);
+  box-shadow: inset 0 -1px 0 rgba(196, 20, 43, .55);
+  padding: 0 .2em; border-radius: 2px; font-style: normal;
+}
+.dark .ph, .book .ph { background: rgba(255, 255, 255, .1); box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .45); }
+.book .form-card .ph { background: rgba(196, 20, 43, .09); box-shadow: inset 0 -1px 0 rgba(196, 20, 43, .55); }
+.ph-tag {
+  display: inline-block; font-family: var(--display); font-stretch: 100%; font-weight: 600; font-size: .8125rem;
+  color: var(--red-deep); background: rgba(196, 20, 43, .1); padding: .25em .6em; border-radius: 4px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  --bg: var(--red); --fg: var(--white); --fill: var(--red-deep);
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; justify-content: center; gap: .7em;
+  min-height: 54px; padding: .9rem 1.5rem .9rem 1.6rem;
+  background: var(--bg); color: var(--fg);
+  border: 0; border-radius: 999px;
+  font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: 1rem; line-height: 1;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: color .35s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+.btn::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; background: var(--fill);
+  border-radius: inherit; transform: translateY(101%); transition: transform .45s var(--ease-out);
+}
+.btn:hover::before, .btn:focus-visible::before { transform: none; }
+.btn .arrow { width: 18px; height: 18px; flex: none; transition: transform .35s var(--ease-out); }
+.btn:hover .arrow { transform: translateX(4px); }
+.btn-light { --bg: var(--paper); --fg: var(--ink); --fill: var(--white); }
+.btn-ink { --bg: var(--ink); --fg: var(--white); --fill: var(--ink-3); }
+.btn-line { --bg: transparent; --fg: currentColor; --fill: rgba(255,255,255,.1); box-shadow: inset 0 0 0 1.5px currentColor; }
+.btn-line.on-paper { --fill: rgba(14,15,17,.06); }
+
+.text-link {
+  font-family: var(--display); font-stretch: 108%; font-weight: 700; text-decoration: none;
+  display: inline-flex; align-items: center; gap: .5em; padding-block: .3em;
+  background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 100% 2px;
+  transition: background-size .4s var(--ease-out);
+}
+.text-link:hover { background-size: 35% 2px; }
+.text-link .arrow { width: 16px; height: 16px; transition: transform .35s var(--ease-out); }
+.text-link:hover .arrow { transform: translateX(4px); }
+
+/* ===== Brand ===== */
+.brand { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; color: inherit; }
+.brand-mark { width: 48px; height: 48px; flex: none; }
+.brand-name { height: 27px; width: auto; flex: none; }
+@media (max-width: 560px) { .brand { gap: .6rem; } .brand-mark { width: 40px; height: 40px; } .brand-name { height: 21px; } }
+
+/* ===== Header ===== */
+.site-header {
+  position: fixed; inset: 0 0 auto; z-index: 50; color: var(--paper);
+  transition: background-color .4s var(--ease-out), box-shadow .4s var(--ease-out), transform .45s var(--ease-out);
+}
+.site-header.is-scrolled {
+  background: rgba(14, 15, 17, .86);
+  -webkit-backdrop-filter: saturate(140%) blur(14px); backdrop-filter: saturate(140%) blur(14px);
+  box-shadow: 0 1px 0 var(--line-dark);
+}
+.site-header.is-hidden { transform: translateY(-100%); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: var(--header-h); }
+.primary-nav ul { display: flex; gap: clamp(1.25rem, 2.2vw, 2.25rem); }
+.primary-nav ul a {
+  font-family: var(--display); font-stretch: 108%; font-weight: 600; font-size: .94rem;
+  text-decoration: none; padding: .5rem 0; color: var(--silver); position: relative;
+  transition: color .25s var(--ease-out);
+}
+.primary-nav ul a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: .1rem; height: 2px; background: var(--red-hi);
+  transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease-out);
+}
+.primary-nav ul a:hover, .primary-nav ul a[aria-current="true"] { color: var(--white); }
+.primary-nav ul a:hover::after, .primary-nav ul a[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
+.mobile-nav-extra { display: none; }
+.header-actions { display: flex; align-items: center; gap: 1.5rem; }
+.header-phone { font-family: var(--display); font-stretch: 108%; font-weight: 700; text-decoration: none; font-size: .95rem; line-height: 1.2; }
+.header-phone span { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); }
+.header-actions .btn { min-height: 46px; padding: .7rem 1.2rem; font-size: .94rem; }
+.nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 48px; height: 48px; padding: 0; margin-right: -8px;
+  background: none; border: 0; color: inherit; cursor: pointer;
+}
+.nav-toggle svg { width: 26px; height: 26px; }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+/* =========================================================
+   HERO: the L-plate as a giant brand panel, the car parked in front of it
+   ========================================================= */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  min-height: min(100svh, 1020px);
+  display: flex; flex-direction: column;
+  padding-top: calc(var(--header-h) + clamp(1.5rem, 4vw, 3.5rem));
+}
+.hero::before { /* crimson light spill behind the car */
+  content: ""; position: absolute; z-index: -1; inset: 0;
+  background:
+    radial-gradient(48% 52% at 74% 52%, rgba(196, 20, 43, .30), transparent 70%),
+    radial-gradient(30% 40% at 10% 100%, rgba(255, 255, 255, .05), transparent 70%);
+}
+.hero > .wrap { width: 100%; }
+.hero-grid { flex: 1; align-items: center; row-gap: 2.5rem; }
+.hero-copy { grid-column: 1 / span 6; position: relative; z-index: 3; padding-bottom: clamp(1rem, 3vw, 3rem); }
+.hero h1 {
+  font-size: clamp(3.1rem, 7.4vw, 7.1rem); font-stretch: 100%; line-height: .9; letter-spacing: -.045em;
+  margin-bottom: clamp(1.5rem, 2.6vw, 2.25rem); color: var(--white);
+}
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+.hero h1 .line > span { display: inline-block; }
+.hero h1 em { font-style: normal; color: var(--red-hi); }
+.hero .lede { color: #D6D9DE; max-width: 28em; margin-bottom: 2.25rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem 1rem; }
+
+.hero-visual { grid-column: 7 / -1; position: relative; aspect-ratio: 1 / .9; margin-right: calc(var(--gutter) * -.5); }
+.plate {
+  position: absolute; right: 0; top: 0; width: 70%; aspect-ratio: 1;
+  background: var(--paper); border-radius: var(--r-l); overflow: hidden;
+  box-shadow: 0 50px 90px -40px rgba(0, 0, 0, .7), inset 0 0 0 1px rgba(255,255,255,.6);
+}
+.plate .l-v, .plate .l-h { position: absolute; background: var(--red); }
+.plate .l-v { left: 25%; top: 15%; width: 19%; height: 63%; transform-origin: 50% 0; }
+.plate .l-h { left: 25%; bottom: 22%; width: 52%; height: 19%; transform-origin: 0 50%; }
+.plate-label {
+  position: absolute; right: 7%; top: 7%; text-align: right; color: var(--ink);
+  font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(.55rem, .75vw, .72rem);
+  letter-spacing: .16em; line-height: 1.5; text-transform: uppercase;
+}
+.plate-label span { display: block; font-weight: 600; color: var(--stone); }
+
+.car { position: absolute; left: -8%; bottom: 3%; width: 100%; z-index: 2; will-change: transform; }
+.car-drive { position: relative; }
+.car img { width: 100%; height: auto; position: relative; z-index: 1; }
+.car-shadow {
+  position: absolute; left: 4%; right: 3%; bottom: -5%; height: 18%;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, .85), rgba(0, 0, 0, .35) 55%, transparent);
+}
+.floor-line {
+  position: absolute; left: 0; right: 0; z-index: -1; bottom: 0;
+  height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.18) 30%, rgba(255,255,255,.18) 70%, transparent);
+}
+
+.seal {
+  position: absolute; z-index: 3; left: calc(30% - 62px); top: -22px;
+  width: 124px; height: 124px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--paper); text-decoration: none;
+  background: var(--ink); box-shadow: 0 0 0 1px var(--line-dark), 0 20px 40px -12px rgba(0,0,0,.6);
+  transition: transform .5s var(--ease-out), background-color .3s;
+}
+.seal:hover { transform: scale(1.06); background: var(--red); }
+.seal-ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+.seal-ring text { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: 10.4px; letter-spacing: .12em; fill: currentColor; }
+.seal-mark { width: 70px; height: 70px; color: var(--red); transition: color .3s; }
+.seal:hover .seal-mark { color: var(--paper); }
+
+.hero-facts {
+  border-top: 1px solid var(--line-dark); margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: 1.5rem clamp(1.5rem, 3vw, 2.25rem);
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 1.5rem clamp(1.5rem, 3vw, 3rem); align-items: start;
+}
+.hero-facts li { font-size: .94rem; line-height: 1.45; color: var(--mist); max-width: 22rem; }
+.hero-facts strong {
+  display: flex; align-items: center; gap: .55rem; color: var(--paper); margin-bottom: .3rem;
+  font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: 1rem;
+}
+.hero-facts strong::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red-hi); flex: none; }
+.scroll-cue {
+  align-self: center; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  box-shadow: inset 0 0 0 1.5px var(--line-dark); color: var(--paper); transition: box-shadow .3s, background-color .3s;
+}
+.scroll-cue:hover { background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1.5px var(--paper); }
+.scroll-cue svg { width: 18px; height: 18px; }
+
+/* Hero load sequence: the page's one orchestrated moment */
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero h1 .line > span { transform: translateY(105%); }
+  .js .hero .eyebrow, .js .hero .lede, .js .hero-ctas, .js .hero-facts li, .js .scroll-cue { opacity: 0; transform: translateY(18px); }
+  .js .plate { clip-path: inset(100% 0 0 0 round var(--r-l)); }
+  .js .plate .l-v { transform: scaleY(0); }
+  .js .plate .l-h { transform: scaleX(0); }
+  .js .plate-label { opacity: 0; }
+  .js .car-drive { transform: translateX(-38%); opacity: 0; }
+  .js .car-shadow { opacity: 0; }
+  .js .seal { opacity: 0; transform: scale(.6) rotate(-40deg); }
+
+  .js.is-loaded .hero h1 .line > span { transform: none; transition: transform 1.1s var(--ease-out); }
+  .js.is-loaded .hero h1 .line:nth-child(2) > span { transition-delay: .08s; }
+  .js.is-loaded .hero h1 .line:nth-child(3) > span { transition-delay: .16s; }
+  .js.is-loaded .hero .eyebrow, .js.is-loaded .hero .lede, .js.is-loaded .hero-ctas,
+  .js.is-loaded .hero-facts li, .js.is-loaded .scroll-cue { opacity: 1; transform: none; transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+  .js.is-loaded .hero .lede { transition-delay: .3s; }
+  .js.is-loaded .hero-ctas { transition-delay: .4s; }
+  .js.is-loaded .hero-facts li:nth-child(1) { transition-delay: 1.0s; }
+  .js.is-loaded .hero-facts li:nth-child(2) { transition-delay: 1.08s; }
+  .js.is-loaded .hero-facts li:nth-child(3) { transition-delay: 1.16s; }
+  .js.is-loaded .scroll-cue { transition-delay: 1.24s; }
+  .js.is-loaded .plate { clip-path: inset(0 0 0 0 round var(--r-l)); transition: clip-path 1.1s var(--ease-io) .1s; }
+  .js.is-loaded .plate .l-v { transform: none; transition: transform .8s var(--ease-out) .65s; }
+  .js.is-loaded .plate .l-h { transform: none; transition: transform .7s var(--ease-out) .95s; }
+  .js.is-loaded .plate-label { opacity: 1; transition: opacity .6s 1.1s; }
+  .js.is-loaded .car-drive { transform: none; opacity: 1; transition: transform 1.7s var(--ease-out) .55s, opacity .5s linear .55s; }
+  .js.is-loaded .car-shadow { opacity: 1; transition: opacity 1.2s var(--ease-out) 1s; }
+  .js.is-loaded .seal { opacity: 1; transform: none; transition: opacity .6s var(--ease-out) 1.3s, transform 1s var(--ease-out) 1.3s, background-color .3s; }
+  .js.is-loaded .seal:hover { transform: scale(1.06); transition: transform .5s var(--ease-out), background-color .3s; }
+  .seal-ring { animation: spin 28s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+}
+
+/* ===== Scroll reveals ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] { opacity: 0; transform: translateY(32px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out); transition-delay: var(--d, 0s); }
+  .js [data-reveal="fade"] { transform: none; }
+  .js [data-reveal="mask"] { opacity: 1; transform: none; clip-path: inset(0 0 100% 0); transition: clip-path 1.2s var(--ease-io); transition-delay: var(--d, 0s); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
+  .js [data-reveal="mask"].is-in { clip-path: inset(0 0 0 0); }
+}
+
+/* ===== Section scaffolding ===== */
+.section { padding-block: var(--section); position: relative; }
+.section-head { align-items: end; margin-bottom: clamp(3rem, 6vw, 5.5rem); row-gap: 1.5rem; }
+.section-head .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+.section-head h2 { grid-column: 1 / span 7; }
+.section-head .lede { grid-column: 9 / span 4; margin: 0; }
+
+/* =========================================================
+   LESSONS: a typographic index instead of cards
+   ========================================================= */
+.lesson-list { border-top: 1px solid var(--line); counter-reset: lesson; }
+.lesson {
+  position: relative; isolation: isolate; counter-increment: lesson;
+  display: grid; grid-template-columns: 5.5rem minmax(0, 4.2fr) minmax(0, 5fr) auto; column-gap: clamp(1rem, 2.4vw, 2.5rem); row-gap: .75rem;
+  align-items: start; padding: clamp(1.75rem, 3vw, 2.75rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.lesson::before { /* hover sweep */
+  content: ""; position: absolute; z-index: -1; inset: 0 calc(var(--gutter) * -1);
+  background: var(--paper-2); transform: scaleY(0); transform-origin: bottom;
+  transition: transform .55s var(--ease-out);
+}
+.lesson:hover::before, .lesson:focus-within::before { transform: none; }
+.lesson-num {
+  font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: .85rem; letter-spacing: .1em;
+  color: var(--stone); padding-top: .55rem; transition: color .3s;
+}
+.lesson-num::before { content: "0" counter(lesson); }
+.lesson h3 { font-size: clamp(1.9rem, 3.4vw, 3.1rem); transition: transform .5s var(--ease-out), color .3s; }
+.lesson .for {
+  font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: .9rem; color: var(--red);
+  margin: .9rem 0 0;
+}
+.lesson-body p { margin: 0 0 .75rem; max-width: 34em; }
+.lesson-body p:last-child { margin-bottom: 0; }
+.lesson-points { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.lesson-points li {
+  font-size: .88rem; line-height: 1.3; padding: .45rem .8rem; border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--line); color: var(--ink);
+}
+.lesson-go {
+  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; text-decoration: none;
+  box-shadow: inset 0 0 0 1.5px var(--ink); color: var(--ink);
+  transition: background-color .35s var(--ease-out), color .35s, box-shadow .35s, transform .5s var(--ease-out);
+}
+.lesson-go svg { width: 20px; height: 20px; transition: transform .45s var(--ease-out); }
+.lesson:hover .lesson-num, .lesson:focus-within .lesson-num { color: var(--red); }
+.lesson:hover h3, .lesson:focus-within h3 { transform: translateX(10px); }
+.lesson:hover .lesson-go, .lesson-go:focus-visible { background: var(--red); color: var(--white); box-shadow: none; }
+.lesson:hover .lesson-go svg { transform: rotate(-45deg); }
+
+/* =========================================================
+   GEARBOX: a selector instead of two comparison cards
+   ========================================================= */
+.gearbox { background: var(--ink-2); overflow: hidden; }
+.gearbox-grid { align-items: center; row-gap: 3rem; }
+.gearbox-copy { grid-column: 1 / span 5; }
+.gearbox-copy h2 { color: var(--white); margin-bottom: 1.5rem; }
+.gearbox-copy > p { color: #D6D9DE; max-width: 30em; }
+.gearbox-grid { row-gap: 2rem; }
+.gearbox-copy { align-self: end; }
+
+.gear-stage { grid-column: 7 / -1; grid-row: 1 / span 2; position: relative; min-height: 26rem; display: grid; }
+.gear-panel { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, 1fr); align-content: center; position: relative; padding: clamp(1rem, 3vw, 2.5rem) 0 clamp(1rem, 3vw, 2.5rem) clamp(0rem, 4vw, 3.5rem); }
+.gear-panel[hidden] { display: grid; visibility: hidden; opacity: 0; }
+.gear-letter {
+  position: absolute; right: -2%; top: 50%; transform: translateY(-50%); z-index: 0; pointer-events: none;
+  font-family: var(--display); font-stretch: 125%; font-weight: 900; line-height: .8; letter-spacing: -.06em;
+  font-size: clamp(14rem, 30vw, 28rem); color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, .14);
+}
+.gear-panel > *:not(.gear-letter) { position: relative; z-index: 1; }
+.gear-panel h3 { font-size: clamp(2.2rem, 4vw, 3.6rem); color: var(--white); margin-bottom: 1.25rem; }
+.gear-panel p { color: #D6D9DE; max-width: 28em; font-size: 1.1rem; }
+.ticks { display: grid; gap: .7rem; margin-top: .75rem; }
+.ticks li { display: grid; grid-template-columns: 22px 1fr; gap: .75rem; align-items: start; }
+.ticks li::before {
+  content: ""; width: 22px; height: 22px; margin-top: .1em; border-radius: 50%;
+  background: var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat;
+}
+.gear-panel .ticks li { color: var(--paper); }
+@media (prefers-reduced-motion: no-preference) {
+  .gear-panel { transition: opacity .5s var(--ease-out), visibility 0s; }
+  .gear-panel[hidden] { transition: opacity .3s var(--ease-out), visibility 0s .3s; }
+  .gear-panel .gear-letter { transition: transform .9s var(--ease-out); }
+  .gear-panel[hidden] .gear-letter { transform: translate(14%, -50%); }
+  .gear-panel h3, .gear-panel p, .gear-panel .ticks { transition: transform .7s var(--ease-out); }
+  .gear-panel[hidden] h3, .gear-panel[hidden] p, .gear-panel[hidden] .ticks { transform: translateY(16px); }
+}
+
+/* =========================================================
+   FIRST LESSON: copy + photo, then a road the car drives along
+   ========================================================= */
+.first-grid { row-gap: clamp(2.5rem, 5vw, 4rem); }
+.first-copy { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(1rem, 2.4vw, 2.5rem); row-gap: clamp(2rem, 4vw, 3rem); align-items: end; }
+.first-head { grid-column: 1 / span 6; }
+.first-head h2 { margin-bottom: 0; }
+.first-intro { grid-column: 8 / -1; }
+.first-intro .lede { margin-bottom: 0; }
+.first-copy .ticks strong { display: block; margin-bottom: .2rem; color: var(--ink); font-family: var(--display); font-stretch: 108%; font-weight: 700; }
+.first-copy .ticks { grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem clamp(1.5rem, 3vw, 3rem); margin: 0; padding-top: clamp(1.5rem, 3vw, 2rem); border-top: 1px solid var(--line); }
+.first-photo { grid-column: 1 / -1; margin: 0; position: relative; }
+
+/* Pass carousel: one focused portrait photo, two neighbours each side stepping back in 3D */
+.pass-stage {
+  --w: 25%; --shift: 72%; --near: .84; --far: .7; --tilt: 22deg; --ease-flow: cubic-bezier(.65, .05, .25, 1);
+  position: relative; aspect-ratio: 2.35 / 1; overflow: hidden; perspective: 1500px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+  touch-action: pan-y; cursor: grab; outline: none; user-select: none; -webkit-user-select: none;
+}
+.pass-stage:active { cursor: grabbing; }
+.pass-stage:focus-visible .pass-slide.is-active { outline: 2px solid var(--red); outline-offset: 4px; }
+.pass-slide {
+  --d: 0; --s: .56; --r: 0deg;
+  position: absolute; left: 50%; top: 50%; width: var(--w); aspect-ratio: 4 / 5; z-index: 0;
+  border-radius: clamp(12px, 1.4vw, 18px); overflow: hidden; background: var(--paper-2); opacity: 0;
+  transform: translate3d(-50%, -50%, 0) translateX(calc(var(--d) * var(--shift))) rotateY(var(--r)) scale(var(--s));
+  transition: transform .9s var(--ease-flow), opacity .9s var(--ease-flow), box-shadow .9s var(--ease-flow);
+  will-change: transform, opacity; backface-visibility: hidden;
+}
+.pass-slide.is-near, .pass-slide.is-far { opacity: 1; cursor: pointer; --r: calc(var(--tilt) * -1); }
+.pass-slide.is-left { --r: var(--tilt); }
+.pass-slide.is-near { --s: var(--near); z-index: 2; box-shadow: 0 18px 30px -18px rgba(14, 15, 17, .5); }
+.pass-slide.is-far { --s: var(--far); z-index: 1; box-shadow: 0 14px 24px -16px rgba(14, 15, 17, .4); }
+.pass-slide.is-active {
+  --s: 1; --r: 0deg; opacity: 1; z-index: 3;
+  box-shadow: 0 2px 4px rgba(14, 15, 17, .08), 0 26px 40px -20px rgba(14, 15, 17, .5), 0 12px 24px -14px rgba(196, 20, 43, .3);
+}
+.pass-slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(270deg, rgba(14, 15, 17, .55), rgba(14, 15, 17, .2)); opacity: 1; transition: opacity .9s var(--ease-flow); }
+.pass-slide.is-left::after { background: linear-gradient(90deg, rgba(14, 15, 17, .55), rgba(14, 15, 17, .2)); }
+.pass-slide.is-far::after { background-color: rgba(14, 15, 17, .25); }
+.pass-slide.is-near:hover::after, .pass-slide.is-far:hover::after { opacity: .55; }
+.pass-slide.is-active::after { opacity: 0; }
+.pass-slide img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; transform: scale(1); transition: transform 1.2s var(--ease-out); }
+.pass-slide.is-active img { transform: scale(1.06); transition: transform 4s linear; }
+
+.pass-nav { display: flex; justify-content: center; align-items: center; gap: clamp(1rem, 2.5vw, 1.75rem); margin-top: clamp(.5rem, 1.2vw, 1rem); }
+.pass-status { display: flex; align-items: center; gap: .9rem; font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: .78rem; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
+.pass-num { min-width: 2ch; text-align: center; color: var(--ink); }
+.pass-total { color: var(--stone); }
+.pass-timer { position: relative; width: clamp(90px, 14vw, 160px); height: 2px; border-radius: 2px; background: rgba(14, 15, 17, .14); overflow: hidden; }
+.pass-timer i { position: absolute; inset: 0; background: var(--red); transform: scaleX(0); transform-origin: left; }
+.pass-timer.is-running i { animation: pass-fill 3s linear forwards; }
+.is-paused .pass-timer.is-running i { animation-play-state: paused; }
+@keyframes pass-fill { to { transform: scaleX(1); } }
+.pass-btn {
+  flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; padding: 0;
+  background: transparent; color: var(--ink); border: 1px solid rgba(14, 15, 17, .18);
+  transition: background-color .3s, border-color .3s, color .3s, transform .3s var(--ease-out);
+}
+.pass-btn:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.pass-btn:active { transform: scale(.94); }
+.pass-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.pass-btn svg { width: 18px; height: 18px; }
+.pass-btn[data-prev] svg { transform: rotate(180deg); }
+@media (max-width: 900px) {
+  .first-head, .first-intro { grid-column: 1 / -1; }
+  .first-copy { row-gap: 1.5rem; }
+  .first-copy .ticks { grid-template-columns: minmax(0, 1fr); }
+  .pass-stage { --w: 34%; --shift: 70%; aspect-ratio: 1.75 / 1; }
+}
+@media (max-width: 560px) {
+  .pass-stage { --w: 50%; --shift: 66%; --tilt: 18deg; aspect-ratio: 1.15 / 1; }
+  .pass-btn { width: 42px; height: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pass-slide, .pass-slide::after, .pass-slide img, .pass-slide.is-active img { transition-duration: .01s; }
+  .pass-slide.is-active img { transform: none; }
+  .pass-timer i { transform: scaleX(1); }
+  .pass-timer.is-running i { animation: none; }
+}
+.frame { position: relative; overflow: hidden; border-radius: var(--r-l); background: var(--paper-2); }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
+.frame .px { position: absolute; inset: -8% 0; height: 116%; }
+.frame .px img { height: 100%; }
+figcaption { font-size: .875rem; color: var(--stone); margin-top: .85rem; max-width: 34em; }
+.dark figcaption { color: var(--mist); }
+
+.route { margin-top: clamp(4.5rem, 9vw, 8rem); }
+.route h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); margin-bottom: clamp(2rem, 4vw, 3rem); }
+.road { position: relative; height: 64px; margin-bottom: 2.25rem; }
+.road-track {
+  position: absolute; left: 0; right: 0; top: 50%; height: 34px; transform: translateY(-50%);
+  background: var(--ink); border-radius: 999px; overflow: hidden;
+}
+.road-track::before { /* centre line */
+  content: ""; position: absolute; left: 22px; right: 22px; top: 50%; height: 2px; transform: translateY(-50%);
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.55) 0 18px, transparent 18px 34px);
+}
+.road-progress { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: var(--red); transform-origin: left; transform: scaleX(var(--p, 1)); }
+.road-car {
+  position: absolute; left: 0; bottom: 40px; width: 92px; height: 43px; color: var(--ink);
+  transform: translateX(var(--x, 0px)); will-change: transform;
+}
+.road-stops { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); pointer-events: none; }
+.road-stops span { position: relative; }
+.road-stops span::after {
+  content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translateY(-50%);
+  background: var(--paper); box-shadow: 0 0 0 4px var(--ink);
+}
+.road-stops span:first-child::after { left: 10px; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(1rem, 2.4vw, 2.5rem); row-gap: 2rem; counter-reset: step; }
+.steps li { counter-increment: step; padding-right: clamp(0rem, 3vw, 3rem); }
+.steps li::before {
+  content: "Step 0" counter(step); display: block; margin-bottom: .9rem;
+  font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--red);
+}
+.steps h4 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); letter-spacing: -.025em; margin-bottom: .6rem; line-height: 1.05; }
+.steps p { margin: 0; color: var(--stone); }
+
+/* =========================================================
+   LOCAL ROADS: layered photography on dark
+   ========================================================= */
+.local-grid { row-gap: 3.5rem; }
+.local-copy { grid-column: 1 / span 6; align-self: center; }
+.local-copy h2 { color: var(--white); margin-bottom: 1.5rem; }
+.local-copy .lede { color: #D6D9DE; }
+.road-types { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem clamp(1.5rem, 3vw, 2.5rem); margin-top: 3rem; }
+.road-types li { color: var(--mist); font-size: .97rem; line-height: 1.5; }
+.road-types svg { width: 34px; height: 34px; color: var(--red-hi); margin-bottom: .9rem; }
+.road-types strong { display: block; color: var(--white); font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: 1.08rem; margin-bottom: .3rem; }
+
+.local-media { grid-column: 8 / -1; position: relative; align-self: center; }
+.local-media .main { margin: 0; position: relative; }
+.local-media .main .frame {
+  position: relative; z-index: 1; aspect-ratio: 1; border-radius: var(--r-l);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .08), 0 40px 80px -30px rgba(0, 0, 0, .8);
+}
+.local-media .main .frame img { object-position: 50% 70%; }
+.local-media .main .frame::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1); background: linear-gradient(180deg, rgba(14, 15, 17, 0) 70%, rgba(14, 15, 17, .25)); pointer-events: none; }
+
+.areas { grid-column: 1 / -1; border-top: 1px solid var(--line-dark); padding-top: clamp(2.5rem, 5vw, 4rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 19rem); gap: 2rem 3rem; align-items: end; }
+.areas h3 { font-size: .78rem; font-stretch: 125%; letter-spacing: .14em; text-transform: uppercase; color: var(--mist); margin-bottom: 1.25rem; font-weight: 700; }
+.area-city {
+  font-family: var(--display); font-stretch: 112%; font-weight: 800; letter-spacing: -.04em; line-height: 1;
+  font-size: clamp(2.6rem, 6vw, 5.4rem); color: var(--white); margin: 0 0 clamp(1.1rem, 2vw, 1.5rem);
+}
+.area-codes { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; }
+.area-codes li {
+  display: inline-flex; align-items: center; min-height: 42px; padding: 0 1.05rem; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .04); color: var(--white);
+  font-family: var(--display); font-stretch: 112%; font-weight: 700; font-size: 1.05rem; letter-spacing: .02em;
+}
+.area-codes li.more { border-color: transparent; background: none; color: var(--mist); font-weight: 600; padding-left: .35rem; }
+.areas-cta p { color: var(--mist); max-width: 22em; margin-bottom: 1rem; }
+
+/* =========================================================
+   TRUST: your instructor
+   ========================================================= */
+.trust-grid { row-gap: 3rem; align-items: center; }
+.instructor-photo { grid-column: 1 / span 6; margin: 0; position: relative; }
+.instructor-photo .frame {
+  aspect-ratio: 1; border-radius: var(--r-l);
+  box-shadow: 0 2px 4px rgba(14, 15, 17, .06), 0 40px 70px -34px rgba(14, 15, 17, .5);
+}
+.instructor-photo .frame img { object-position: 50% 45%; }
+.instructor-tag {
+  position: absolute; left: clamp(14px, 2vw, 22px); bottom: clamp(14px, 2vw, 22px); margin: 0; max-width: none;
+  display: flex; flex-direction: column; gap: .15rem; padding: .8rem 1.1rem; border-radius: 14px;
+  background: rgba(14, 15, 17, .78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  color: var(--mist); font-family: var(--display); font-stretch: 108%; font-weight: 600; font-size: .8rem; letter-spacing: .02em;
+}
+.instructor-tag span { color: var(--white); font-weight: 800; font-size: 1.1rem; letter-spacing: -.01em; }
+.instructor { grid-column: 8 / -1; }
+.instructor h3 { font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -.035em; margin-bottom: 1.1rem; }
+.instructor-intro { font-size: clamp(1.08rem, 1.4vw, 1.2rem); line-height: 1.55; color: var(--ink); margin-bottom: 1rem; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 1.75rem 0 2rem; border-top: 1px solid var(--line); }
+.facts > div { padding: 1rem 1rem 1rem 0; border-bottom: 1px solid var(--line); }
+.facts dt { font-family: var(--display); font-stretch: 125%; font-weight: 700; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--stone); margin-bottom: .3rem; }
+.facts dd { margin: 0; font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: 1.02rem; color: var(--ink); }
+
+/* =========================================================
+   BOOK: the closing call to action
+   ========================================================= */
+.book { background: var(--red); color: var(--white); overflow: hidden; }
+.book::before { /* metallic paint gradient */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(70% 90% at 0% 0%, rgba(255,255,255,.14), transparent 60%),
+    radial-gradient(60% 80% at 100% 100%, rgba(80, 0, 12, .45), transparent 70%);
+}
+.book-grid { position: relative; row-gap: 3.5rem; align-items: start; }
+.book-copy { grid-column: 1 / span 5; position: relative; }
+.book-copy h2 { font-size: clamp(3rem, 7.2vw, 6.6rem); line-height: .88; letter-spacing: -.05em; margin-bottom: 1.75rem; }
+.book-copy .lede { margin-bottom: 2.75rem; color: rgba(255,255,255,.92); }
+.contact-list { display: grid; gap: 1.25rem; margin: 0; }
+.ci { width: 1.15em; height: 1.15em; flex: none; }
+.contact-list dt { display: flex; align-items: center; gap: .55rem; }
+.contact-list dt .ci { width: 18px; height: 18px; opacity: .9; }
+.contact-list dd { overflow-wrap: anywhere; }
+.footer-col .ci { width: 17px; height: 17px; color: var(--red-hi); }
+.footer-col li > a:has(.ci), .footer-col li > span:has(.ci) { display: inline-flex; align-items: center; gap: .6rem; overflow-wrap: anywhere; }
+.contact-list div { display: grid; gap: .1rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255,255,255,.25); }
+.contact-list dt { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; font-family: var(--display); font-stretch: 118%; font-weight: 700; opacity: .8; }
+.contact-list dd { margin: 0; font-family: var(--display); font-stretch: 108%; font-weight: 700; font-size: clamp(1rem, 4.3vw, 1.35rem); }
+.contact-list a { text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.book-drive { position: relative; width: min(100%, 420px); margin-top: 3rem; padding-bottom: clamp(18px, 2.4vw, 26px); }
+.book-car { position: relative; z-index: 1; display: block; width: 100%; color: rgba(255,255,255,.9); overflow: visible; }
+.book-drive .road {
+  position: absolute; left: -12%; right: -12%; top: calc((100% - clamp(18px, 2.4vw, 26px)) * .893); height: clamp(18px, 2.4vw, 26px);
+  border-top: 2px solid rgba(255, 255, 255, .8); border-bottom: 2px solid rgba(255, 255, 255, .4);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 16%, #000 84%, transparent);
+}
+.book-drive .road::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; opacity: .6;
+  background: repeating-linear-gradient(90deg, #fff 0 22px, transparent 22px 40px);
+}
+.book-drive .speed { position: absolute; left: -9%; top: 34%; width: 16%; height: 30%; pointer-events: none; }
+.book-drive .speed i { position: absolute; right: 0; height: 2px; width: 100%; border-radius: 2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.75)); opacity: 0; }
+.book-drive .speed i:nth-child(1) { top: 0; width: 70%; }
+.book-drive .speed i:nth-child(2) { top: 45%; }
+.book-drive .speed i:nth-child(3) { top: 90%; width: 55%; }
+.book-car .wheel { transform-box: fill-box; transform-origin: center; }
+.book-car .wheel .rim { stroke-width: 1; opacity: .75; }
+.book-car .wheel .hub { fill: currentColor; }
+.book-car .wheel .spokes { stroke-width: 1; }
+.book-car path, .book-car circle { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .book-car path, .js .book-car circle { stroke-dasharray: var(--len, 400); stroke-dashoffset: var(--len, 400); }
+  .js .book-car.is-in path, .js .book-car.is-in circle { stroke-dashoffset: 0; transition: stroke-dashoffset 2.2s var(--ease-io); }
+  .js .book-car.is-in circle { transition-delay: .6s; }
+  /* once drawn, it drives: road and speed lines stream past, wheels turn, body rides the bumps */
+  .book-drive .road::before { animation: road-move .45s linear infinite; }
+  .book-car.is-in .wheel { animation: wheel-spin 1.3s linear infinite 2.2s; }
+  .book-car.is-in .car-body { animation: car-ride 1.1s ease-in-out infinite 2.2s; }
+  .book-drive:has(.is-in) .speed i { animation: speed-line 1.1s linear infinite 2.2s; }
+  .book-drive .speed i:nth-child(2) { animation-delay: 2.55s !important; }
+  .book-drive .speed i:nth-child(3) { animation-delay: 2.9s !important; }
+  .book-drive:has(.is-in) { animation: car-drift 6s ease-in-out infinite 2.2s; }
+  @keyframes road-move { to { background-position: -40px 0; } }
+  @keyframes wheel-spin { to { transform: rotate(360deg); } }
+  @keyframes car-ride { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-.7px); } }
+  @keyframes speed-line { 0% { transform: translateX(30%); opacity: 0; } 25% { opacity: .9; } 100% { transform: translateX(-90%); opacity: 0; } }
+  @keyframes car-drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(14px); } }
+}
+
+.form-card {
+  grid-column: 7 / -1; background: var(--paper); color: var(--ink); border-radius: var(--r-l);
+  padding: clamp(1.5rem, 4vw, 3.25rem); box-shadow: 0 60px 100px -50px rgba(40, 0, 6, .7);
+}
+.form-card h3 { font-size: clamp(1.8rem, 2.8vw, 2.4rem); margin-bottom: .5rem; }
+.form-card > p { color: var(--stone); margin-bottom: 1.75rem; }
+.field-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.field { display: grid; gap: .45rem; margin-bottom: 1.25rem; align-content: start; }
+.field label, .field legend { font-family: var(--display); font-stretch: 108%; font-weight: 600; font-size: .95rem; padding: 0; }
+.field .hint { font-weight: 400; color: var(--stone); font-family: var(--body); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 54px; padding: .8rem 1rem;
+  font: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--white); border: 1.5px solid #C2C5CA; border-radius: 12px;
+  transition: border-color .2s var(--ease-out), box-shadow .2s var(--ease-out);
+}
+.field select {
+  appearance: none; -webkit-appearance: none; padding-right: 2.75rem;
+  background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%230E0F11' stroke-width='2'/%3E%3C/svg%3E") right 1rem center / 18px no-repeat;
+}
+.field textarea { min-height: 100px; resize: vertical; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--stone); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 4px rgba(196, 20, 43, .22); }
+.field [aria-invalid="true"] { border-color: var(--red); }
+.field .error { color: var(--red-deep); font-size: .9rem; margin: 0; font-weight: 700; }
+fieldset.field { border: 0; margin: 0 0 1.25rem; padding: 0; min-width: 0; }
+.choice-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .45rem; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choice label {
+  display: inline-flex; align-items: center; min-height: 46px; padding: .55rem 1.2rem; cursor: pointer;
+  background: var(--white); border: 1.5px solid #C2C5CA; border-radius: 999px;
+  font-family: var(--display); font-stretch: 108%; font-weight: 600; font-size: .95rem;
+  transition: background-color .25s var(--ease-out), border-color .25s, color .25s;
+}
+.choice label:hover { border-color: var(--ink); }
+.choice input:checked + label { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.choice input:focus-visible + label { outline: 3px solid var(--red); outline-offset: 2px; }
+.form-card .btn { width: 100%; margin-top: .5rem; min-height: 58px; }
+.form-small { font-size: .875rem; color: var(--stone); margin: 1rem 0 0; }
+.form-status { margin: 1rem 0 0; padding: 1rem 1.1rem; background: var(--paper-2); border-radius: 12px; font-size: .95rem; }
+.form-status[hidden] { display: none; }
+
+/* ===== Footer ===== */
+.site-footer { padding-block: clamp(4rem, 7vw, 6rem) 2rem; font-size: .97rem; }
+.footer-grid { row-gap: 2.5rem; }
+.footer-brand { grid-column: 1 / span 4; }
+.footer-brand p { color: var(--mist); margin-top: 1.25rem; max-width: 24em; }
+.footer-col { grid-column: span 2; }
+.footer-col.wide { grid-column: span 3; }
+.footer-col h2 { font-size: .75rem; font-stretch: 125%; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; line-height: 1.3; margin-bottom: 1.1rem; color: var(--mist); }
+.footer-col ul { display: grid; gap: .55rem; }
+.footer-col a { color: var(--paper); text-decoration: none; }
+.footer-col a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.footer-col li { color: var(--paper); }
+.footer-col .handle { display: block; color: var(--mist); font-size: .85rem; font-weight: 400; }
+.footer-base {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem;
+  margin-top: clamp(3.5rem, 6vw, 5rem); padding-top: 1.75rem; border-top: 1px solid var(--line-dark);
+  color: var(--mist); font-size: .875rem;
+}
+.footer-base p { margin: 0; }
+.footer-base ul { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.footer-base a { color: var(--mist); }
+.footer-base a:hover { color: var(--white); }
+
+/* ===== Mobile action bar ===== */
+.action-bar { display: none; }
+
+/* ===== Image hover ===== */
+.frame img { transition: transform 1.2s var(--ease-out); }
+figure:hover .frame img { transform: scale(1.035); }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 1180px) {
+  .header-phone { display: none; }
+  .lesson { grid-template-columns: 4rem minmax(0, 1fr) auto; }
+  .lesson-body { grid-column: 2 / 3; }
+  .lesson-go { grid-column: 3; grid-row: 1; }
+}
+
+@media (max-width: 1024px) {
+  :root { --header-h: 72px; }
+  .primary-nav, .header-actions .btn { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .primary-nav.is-open {
+    display: block; position: fixed; inset: var(--header-h) 0 0 0; z-index: 49;
+    background: var(--ink); padding: 2rem var(--gutter) 3rem; overflow-y: auto;
+  }
+  .primary-nav.is-open ul { flex-direction: column; gap: 0; }
+  .primary-nav.is-open ul a {
+    display: block; padding: .5rem 0; color: var(--paper);
+    font-stretch: 100%; font-weight: 800; font-size: clamp(2.2rem, 8vw, 3rem); letter-spacing: -.04em; line-height: 1.1;
+  }
+  .primary-nav.is-open ul a::after { display: none; }
+  .primary-nav.is-open .mobile-nav-extra { display: grid; gap: .75rem; margin-top: 2.5rem; max-width: 26rem; }
+  .mobile-nav-extra .btn { width: 100%; }
+  .mobile-nav-extra p { color: var(--mist); margin: .5rem 0 0; }
+  .site-header.menu-open { background: var(--ink); }
+  @media (prefers-reduced-motion: no-preference) {
+    .primary-nav.is-open { animation: menu-in .45s var(--ease-out); }
+    @keyframes menu-in { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+  }
+
+  .hero-copy { grid-column: 1 / span 7; }
+  .hero-visual { grid-column: 8 / -1; margin-right: 0; }
+  .hero-visual .plate { width: 80%; }
+  .hero-visual .car { left: -14%; width: 116%; }
+  .hero-visual .seal { left: calc(20% - 62px); }
+  .hero h1 { font-size: clamp(3rem, 7.6vw, 5.6rem); }
+  .hero-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .scroll-cue { display: none; }
+  .section-head h2 { grid-column: 1 / span 8; }
+  .section-head .lede { grid-column: 1 / span 8; }
+  .gearbox-copy { grid-column: 1 / span 6; }
+  .gear-stage { grid-column: 7 / -1; }
+  .local-copy { grid-column: 1 / span 7; }
+  .local-media { grid-column: 8 / -1; }
+  .book-copy { grid-column: 1 / span 6; }
+  .form-card { grid-column: 7 / -1; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-col, .footer-col.wide { grid-column: span 4; }
+}
+
+@media (max-width: 900px) {
+  .instructor-photo, .instructor { grid-column: 1 / -1; }
+  .instructor-photo { max-width: 34rem; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .grid > * { grid-column: 1 / -1 !important; grid-row: auto !important; }
+
+  .hero { min-height: 0; padding-top: calc(var(--header-h) + 1.75rem); }
+  .hero-grid { row-gap: 0; }
+  .hero-copy { padding-bottom: 0; }
+  .hero-visual { margin: 2.5rem 0 0; width: 100%; max-width: 640px; justify-self: center; aspect-ratio: 1 / .92; }
+  .hero::before { background: radial-gradient(70% 40% at 60% 72%, rgba(196, 20, 43, .32), transparent 70%); }
+  .car { left: -10%; width: 112%; }
+  .plate { width: 68%; }
+  .seal { width: 100px; height: 100px; left: calc(32% - 50px); top: -14px; }
+  .seal-mark { width: 56px; height: 56px; }
+  .hero-facts { grid-template-columns: 1fr; gap: 1.1rem; margin-top: 1.5rem; }
+
+  .lesson { grid-template-columns: minmax(0, 1fr) auto; padding: 1.75rem 0; }
+  .lesson-num { grid-column: 1 / -1; padding-top: 0; }
+  .lesson-head { grid-column: 1; }
+  .lesson-body { grid-column: 1 / -1; }
+  .lesson-go { grid-column: 2; grid-row: 2; width: 50px; height: 50px; }
+
+  .gear-stage { min-height: 0; }
+  .gear-panel { padding: 0; }
+  .gear-letter { font-size: 15rem; right: -4%; }
+
+  .road { display: none; }
+  .steps { grid-template-columns: 1fr; border-left: 2px dashed var(--line); padding-left: 1.5rem; gap: 2.25rem; }
+  .steps li { position: relative; padding-right: 0; }
+  .steps li::after { content: ""; position: absolute; left: calc(-1.5rem - 8px); top: .1rem; width: 14px; height: 14px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px var(--paper); }
+
+  .local-media { max-width: 560px; margin-top: 1rem; }
+  .road-types { grid-template-columns: 1fr 1fr; }
+  .areas { grid-template-columns: 1fr; margin-top: 2rem; }
+
+  .book-drive { width: min(78%, 300px); margin: 2.5rem 0 .5rem 8%; }
+  .form-card { margin-inline: calc(var(--gutter) * -1); border-radius: var(--r-l) var(--r-l) 0 0; padding-inline: var(--gutter); margin-bottom: calc(var(--section) * -1); padding-bottom: 3rem; }
+  .footer-col, .footer-col.wide { grid-column: auto !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1 !important; }
+
+  /* Sticky call/book bar for phones */
+  .action-bar {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: .6rem;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: .6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom));
+    background: rgba(14, 15, 17, .92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    box-shadow: 0 -1px 0 var(--line-dark);
+    transform: translateY(110%); transition: transform .45s var(--ease-out);
+  }
+  .action-bar.is-visible { transform: none; }
+  .action-bar .btn { min-height: 50px; padding-inline: .75rem; }
+  .action-bar .btn-line { color: var(--paper); }
+  .site-footer { padding-bottom: 6.5rem; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  .eyebrow { font-size: .7rem; letter-spacing: .1em; gap: .6rem; }
+  .eyebrow::before { width: 20px; }
+  .hero h1 { font-size: clamp(2.9rem, 14.5vw, 4.4rem); }
+  .hero-ctas .btn { width: 100%; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .road-types { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .lesson-go { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===== Brand illustrations ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Line illustration of the tuition hatchback, roof sign included -->
+  <symbol id="car-line" viewBox="0 0 120 56">
+    <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 42C11 36 11.5 31 13 28C15 22 18 17 24 14.5C34 12.8 50 12.5 62 13C66 13.3 70 16 79 25C90 26.5 100 28 105 31C108.5 33 110 36.5 109.5 42H101A11 11 0 0 0 79 42H41A11 11 0 0 0 19 42Z"/>
+      <path d="M20 26C21.5 21.5 23.5 18.5 27 17.3C36 16 50 15.8 60 16.2C63.5 16.5 66.5 18.5 74 26Z"/>
+      <path d="M47 16V26"/>
+      <path d="M35 12.8L37 5.5H53L55 12.6"/>
+      <path d="M100 30L106 32"/>
+      <circle cx="30" cy="42" r="8.2"/><circle cx="90" cy="42" r="8.2"/>
+    </g>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4-2 1.3a11 11 0 0 0 7.4 7.4l1.3-2 4 1.6V19a1.6 1.6 0 0 1-1.7 1.6A16.5 16.5 0 0 1 3.4 5.2 1.6 1.6 0 0 1 5 3.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.1 7.9c.3-.1.6 0 .8.3l.8 1.8c.1.3 0 .6-.2.8l-.6.6a6 6 0 0 0 2.8 2.8l.6-.6c.2-.2.5-.3.8-.2l1.8.8c.3.2.4.5.3.8-.3 1.1-1.3 1.7-2.4 1.5a8 8 0 0 1-5.9-5.9c-.2-1.1.4-2.1 1.5-2.4Z" fill="currentColor"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M14 3.5v11.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3.5c.4 2.6 2.3 4.5 5 4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="person" viewBox="0 0 100 110">
+    <circle cx="50" cy="32" r="22" fill="currentColor"/>
+    <path d="M6 110c0-26 19.7-44 44-44s44 18 44 44z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Ahmad, driving instructor, back to top">
+      <svg class="brand-mark" viewBox="0 0 1000 1000" aria-hidden="true"><circle cx="500" cy="500" r="453" fill="none" stroke="#C8102E" stroke-width="34"/><g transform="translate(500 500) scale(0.8967) translate(-585.0 -484.0)"><mask id="bm0" maskUnits="userSpaceOnUse" x="0" y="0" width="1100" height="1000"><rect width="1100" height="1000" fill="#fff"/><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#000" stroke="#000" stroke-width="28" stroke-linejoin="round"/></mask><g mask="url(#bm0)" fill="#F3F0E9"><path d="M385 280 L553.1 634 C564.5 658 575.4 664 613 664 L613 680 L447 680 L447 664 C463.4 664 468.5 658 457.1 634 L360.9 431.4 L269.7 634 C258.9 658 264.2 664 281 664 L281 680 L167 680 L167 664 C204.2 664 214.9 658 225.7 634 Z"/><path d="M640 280 L812 280 C900.3 280 972 369.6 972 480.0 C972 590.4 900.3 680 812 680 L640 680 L640 664 C664 664 672 658 672 634 L672 326 C672 302 664 296 640 296 Z M764 316 L764 644 L809 644 C843.8 644 872 570.5 872 480.0 C872 389.5 843.8 316 809 316 Z" fill-rule="evenodd"/></g><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#C8102E"/></g></svg>
+      <svg class="brand-name" viewBox="0 0 1291.57 192" aria-hidden="true"><path fill="currentColor" d="M0 100L50 -0L73.48 -0L23.48 100ZM73.48 -0L123.48 100L100 100L50 -0ZM27.74 57.5L95.74 57.5L95.74 78.5L27.74 78.5ZM145.48 100L145.48 -0L166.48 -0L166.48 100ZM218.48 100L218.48 -0L239.48 -0L239.48 100ZM155.98 39.5L228.98 39.5L228.98 60.5L155.98 60.5ZM265.48 100L265.48 -0L287.65 -0L324.48 75.94L361.31 -0L383.48 -0L383.48 100L362.48 100L362.48 45.71L336.15 100L312.81 100L286.48 45.71L286.48 100ZM405.48 100L455.48 -0L478.96 -0L428.96 100ZM478.96 -0L528.96 100L505.48 100L455.48 -0ZM433.22 57.5L501.22 57.5L501.22 78.5L433.22 78.5ZM550.96 100L550.96 -0L571.96 -0L571.96 100ZM561.46 0L611.13 0L613.57 0.08L616.18 0.34L618.76 0.76L621.31 1.36L623.82 2.12L626.27 3.04L628.65 4.12L630.96 5.35L633.18 6.74L635.31 8.26L637.33 9.92L639.25 11.71L641.04 13.62L642.7 15.65L644.22 17.77L645.6 20L646.84 22.31L647.92 24.69L648.84 27.14L649.6 29.65L650.19 32.2L650.62 34.78L650.88 37.38L650.96 39.83L650.96 60.17L650.88 62.62L650.62 65.22L650.19 67.8L649.6 70.35L648.84 72.86L647.92 75.31L646.84 77.69L645.6 80L644.22 82.23L642.7 84.35L641.04 86.38L639.25 88.29L637.33 90.08L635.31 91.74L633.18 93.26L630.96 94.65L628.65 95.88L626.27 96.96L623.82 97.88L621.31 98.64L618.76 99.24L616.18 99.66L613.57 99.92L611.13 100L561.46 100L561.46 79L610.79 79L612.2 78.95L613.44 78.83L614.66 78.63L615.87 78.35L617.06 77.99L618.23 77.55L619.36 77.04L620.45 76.45L621.51 75.79L622.52 75.07L623.48 74.28L624.39 73.43L625.24 72.52L626.03 71.56L626.75 70.55L627.41 69.5L627.99 68.4L628.51 67.27L628.94 66.11L629.3 64.92L629.59 63.71L629.79 62.48L629.91 61.24L629.96 59.83L629.96 40.17L629.91 38.76L629.79 37.52L629.59 36.29L629.3 35.08L628.94 33.89L628.51 32.73L627.99 31.6L627.41 30.5L626.75 29.45L626.03 28.44L625.24 27.48L624.39 26.57L623.48 25.72L622.52 24.93L621.51 24.21L620.45 23.55L619.36 22.96L618.23 22.45L617.06 22.01L615.87 21.65L614.66 21.37L613.44 21.17L612.2 21.05L610.79 21L561.46 21Z"/><path fill="currentColor" opacity=".72" transform="translate(0 140) scale(0.52)" d="M0 100L0 -0L18 -0L18 100ZM9 0L60.15 0L62.62 0.08L65.22 0.34L67.8 0.76L70.35 1.36L72.86 2.12L75.31 3.04L77.69 4.12L80 5.35L82.23 6.74L84.35 8.26L86.38 9.92L88.29 11.71L90.08 13.62L91.74 15.65L93.26 17.77L94.65 20L95.88 22.31L96.96 24.69L97.88 27.14L98.64 29.65L99.24 32.2L99.66 34.78L99.92 37.38L100 39.85L100 60.15L99.92 62.62L99.66 65.22L99.24 67.8L98.64 70.35L97.88 72.86L96.96 75.31L95.88 77.69L94.65 80L93.26 82.23L91.74 84.35L90.08 86.38L88.29 88.29L86.38 90.08L84.35 91.74L82.23 93.26L80 94.65L77.69 95.88L75.31 96.96L72.86 97.88L70.35 98.64L67.8 99.24L65.22 99.66L62.62 99.92L60.15 100L9 100L9 82L59.85 82L61.44 81.95L62.87 81.81L64.29 81.57L65.69 81.25L67.07 80.83L68.42 80.32L69.73 79.73L71 79.05L72.22 78.29L73.39 77.45L74.5 76.54L75.55 75.55L76.54 74.5L77.45 73.39L78.29 72.22L79.05 71L79.73 69.73L80.32 68.42L80.83 67.07L81.25 65.69L81.57 64.29L81.81 62.87L81.95 61.44L82 59.85L82 40.15L81.95 38.56L81.81 37.13L81.57 35.71L81.25 34.31L80.83 32.93L80.32 31.58L79.73 30.27L79.05 29L78.29 27.78L77.45 26.61L76.54 25.5L75.55 24.45L74.5 23.46L73.39 22.55L72.22 21.71L71 20.95L69.73 20.27L68.42 19.68L67.07 19.17L65.69 18.75L64.29 18.43L62.87 18.19L61.44 18.05L59.85 18L9 18ZM162 100L162 -0L180 -0L180 100ZM171 0L225.15 0L227.16 0.07L229.31 0.28L231.44 0.63L233.54 1.12L235.61 1.75L237.63 2.51L239.6 3.4L241.5 4.42L243.34 5.56L245.09 6.82L246.76 8.19L248.34 9.66L249.81 11.24L251.18 12.91L252.44 14.66L253.58 16.5L254.6 18.4L255.49 20.37L256.25 22.39L256.88 24.46L257.37 26.56L257.72 28.69L257.93 30.84L250.97 -0L248.26 -0L248.26 76.99L257.93 34.16L257.72 36.31L257.37 38.44L256.88 40.54L256.25 42.61L255.49 44.63L254.6 46.6L253.58 48.5L252.44 50.34L251.18 52.09L249.81 53.76L248.34 55.34L246.76 56.81L245.09 58.18L243.34 59.44L241.5 60.58L239.6 61.6L237.63 62.49L235.61 63.25L233.54 63.88L231.44 64.37L229.31 64.72L227.16 64.93L225.15 65L171 65L171 47L224.85 47L225.98 46.96L226.96 46.87L227.93 46.71L228.88 46.48L229.82 46.2L230.74 45.85L231.63 45.45L232.5 44.99L233.33 44.47L234.13 43.9L234.89 43.27L235.6 42.6L236.27 41.89L236.9 41.13L237.47 40.33L237.99 39.5L238.45 38.63L238.85 37.74L239.2 36.82L239.48 35.88L239.71 34.93L239.87 33.96L239.96 32.98L246.97 -0L249.74 -0L249.74 77.99L239.96 32.02L239.87 31.04L239.71 30.07L239.48 29.12L239.2 28.18L238.85 27.26L238.45 26.37L237.99 25.5L237.47 24.67L236.9 23.87L236.27 23.11L235.6 22.4L234.89 21.73L234.13 21.1L233.33 20.53L232.5 20.01L231.63 19.55L230.74 19.15L229.82 18.8L228.88 18.52L227.93 18.29L226.96 18.13L225.98 18.04L224.85 18L171 18ZM207.37 47L217 47L260.66 100L237.34 100L199.21 53.72ZM318 100L318 -0L336 -0L336 100ZM412.12 -0L462.12 100L442 100L392 -0ZM442 100L492 -0L512.12 -0L462.12 100ZM568.12 100L568.12 -0L586.12 -0L586.12 100ZM646.12 100L646.12 -0L666.54 -0L724.12 73.83L724.12 -0L742.12 -0L742.12 100L721.71 100L664.12 26.17L664.12 100ZM907.12 18L844.27 18L842.69 18.05L841.25 18.19L839.83 18.43L838.43 18.75L837.05 19.17L835.71 19.68L834.4 20.27L833.13 20.95L831.9 21.71L830.73 22.55L829.62 23.46L828.57 24.45L827.59 25.5L826.67 26.61L825.84 27.78L825.08 29L824.4 30.27L823.8 31.58L823.3 32.93L822.88 34.31L822.55 35.71L822.32 37.13L822.18 38.56L822.12 40.15L822.12 59.85L822.18 61.44L822.32 62.87L822.55 64.29L822.88 65.69L823.3 67.07L823.8 68.42L824.4 69.73L825.08 71L825.84 72.22L826.67 73.39L827.59 74.5L828.57 75.55L829.62 76.54L830.73 77.45L831.9 78.29L833.13 79.05L834.4 79.73L835.71 80.32L837.05 80.83L838.43 81.25L839.83 81.57L841.25 81.81L842.69 81.95L844.27 82L867.98 82L869.56 81.95L871 81.81L872.42 81.57L873.82 81.25L875.19 80.83L876.54 80.32L877.85 79.73L879.12 79.05L880.34 78.29L881.51 77.45L882.63 76.54L883.68 75.55L884.66 74.5L885.57 73.39L886.41 72.22L887.17 71L887.85 69.73L888.45 68.42L888.95 67.07L889.37 65.69L889.7 64.29L889.93 62.87L890.07 61.44L890.12 59.85L890.12 54L908.12 54L908.12 60.15L908.04 62.62L907.79 65.22L907.36 67.8L906.77 70.35L906.01 72.86L905.08 75.31L904 77.69L902.77 80L901.39 82.23L899.86 84.35L898.2 86.38L896.41 88.29L894.5 90.08L892.48 91.74L890.35 93.26L888.13 94.65L885.82 95.88L883.43 96.96L880.98 97.88L878.48 98.64L875.93 99.24L873.35 99.66L870.74 99.92L868.27 100L843.98 100L841.51 99.92L838.9 99.66L836.32 99.24L833.77 98.64L831.27 97.88L828.82 96.96L826.43 95.88L824.12 94.65L821.9 93.26L819.77 91.74L817.75 90.08L815.84 88.29L814.05 86.38L812.39 84.35L810.86 82.23L809.48 80L808.25 77.69L807.16 75.31L806.24 72.86L805.48 70.35L804.89 67.8L804.46 65.22L804.21 62.62L804.12 60.15L804.12 39.85L804.21 37.38L804.46 34.78L804.89 32.2L805.48 29.65L806.24 27.14L807.16 24.69L808.25 22.31L809.48 20L810.86 17.77L812.39 15.65L814.05 13.62L815.84 11.71L817.75 9.92L819.77 8.26L821.9 6.74L824.12 5.35L826.43 4.12L828.82 3.04L831.27 2.12L833.77 1.36L836.32 0.76L838.9 0.34L841.51 0.08L843.98 0L907.12 0ZM862.36 45L908.12 45L908.12 63L862.36 63ZM1059.12 100L1059.12 -0L1077.12 -0L1077.12 100ZM1137.12 100L1137.12 -0L1157.54 -0L1215.12 73.83L1215.12 -0L1233.12 -0L1233.12 100L1212.71 100L1155.12 26.17L1155.12 100ZM1386.62 18L1323.77 18L1322.87 18.03L1322.12 18.1L1321.38 18.23L1320.65 18.4L1319.93 18.61L1319.23 18.88L1318.54 19.19L1317.88 19.54L1317.24 19.94L1316.63 20.38L1316.05 20.86L1315.5 21.37L1314.98 21.92L1314.5 22.5L1314.07 23.11L1313.67 23.75L1313.31 24.42L1313 25.1L1312.74 25.8L1312.52 26.52L1312.35 27.26L1312.23 28L1312.15 28.75L1312.13 29.5L1312.15 30.25L1312.23 31L1312.35 31.74L1312.52 32.48L1312.74 33.2L1313 33.9L1313.31 34.58L1313.67 35.25L1314.07 35.89L1314.5 36.5L1314.98 37.08L1315.5 37.63L1316.05 38.14L1316.63 38.62L1317.24 39.06L1317.88 39.46L1318.54 39.81L1319.23 40.12L1319.93 40.39L1320.65 40.6L1321.38 40.77L1322.12 40.9L1322.87 40.97L1323.77 41L1358.77 41L1360.55 41.06L1362.48 41.25L1364.38 41.56L1366.26 42L1368.11 42.56L1369.92 43.24L1371.67 44.04L1373.38 44.95L1375.02 45.97L1376.59 47.09L1378.08 48.32L1379.49 49.64L1380.81 51.05L1382.03 52.54L1383.16 54.11L1384.18 55.75L1385.09 57.45L1385.88 59.21L1386.56 61.02L1387.12 62.86L1387.56 64.74L1387.88 66.65L1388.07 68.57L1388.13 70.5L1388.07 72.43L1387.88 74.35L1387.56 76.26L1387.12 78.14L1386.56 79.98L1385.88 81.79L1385.09 83.55L1384.18 85.25L1383.16 86.89L1382.03 88.46L1380.81 89.95L1379.49 91.36L1378.08 92.68L1376.59 93.91L1375.02 95.03L1373.38 96.05L1371.67 96.96L1369.92 97.76L1368.11 98.44L1366.26 99L1364.38 99.44L1362.48 99.75L1360.55 99.94L1358.77 100L1295.62 100L1295.62 82L1358.48 82L1359.38 81.97L1360.13 81.9L1360.87 81.77L1361.6 81.6L1362.32 81.39L1363.02 81.12L1363.71 80.81L1364.37 80.46L1365.01 80.06L1365.62 79.62L1366.2 79.14L1366.75 78.63L1367.27 78.08L1367.74 77.5L1368.18 76.89L1368.58 76.25L1368.93 75.58L1369.24 74.9L1369.51 74.2L1369.73 73.48L1369.9 72.74L1370.02 72L1370.1 71.25L1370.12 70.5L1370.1 69.75L1370.02 69L1369.9 68.26L1369.73 67.52L1369.51 66.8L1369.24 66.1L1368.93 65.42L1368.58 64.75L1368.18 64.11L1367.74 63.5L1367.27 62.92L1366.75 62.37L1366.2 61.86L1365.62 61.38L1365.01 60.94L1364.37 60.54L1363.71 60.19L1363.02 59.88L1362.32 59.61L1361.6 59.4L1360.87 59.23L1360.13 59.1L1359.38 59.03L1358.48 59L1323.48 59L1321.69 58.94L1319.77 58.75L1317.87 58.44L1315.99 58L1314.14 57.44L1312.33 56.76L1310.57 55.96L1308.87 55.05L1307.23 54.03L1305.66 52.91L1304.17 51.68L1302.76 50.36L1301.44 48.95L1300.22 47.46L1299.09 45.89L1298.07 44.25L1297.16 42.55L1296.37 40.79L1295.69 38.98L1295.13 37.14L1294.69 35.26L1294.37 33.35L1294.18 31.43L1294.12 29.5L1294.18 27.57L1294.37 25.65L1294.69 23.74L1295.13 21.86L1295.69 20.02L1296.37 18.21L1297.16 16.45L1298.07 14.75L1299.09 13.11L1300.22 11.54L1301.44 10.05L1302.76 8.64L1304.17 7.32L1305.66 6.09L1307.23 4.97L1308.87 3.95L1310.57 3.04L1312.33 2.24L1314.14 1.56L1315.99 1L1317.87 0.56L1319.77 0.25L1321.69 0.06L1323.48 0L1386.62 0ZM1446.12 0L1536.12 0L1536.12 18L1446.12 18ZM1482.12 100L1482.12 -0L1500.12 -0L1500.12 100ZM1593.12 100L1593.12 -0L1611.12 -0L1611.12 100ZM1602.12 0L1656.27 0L1658.28 0.07L1660.43 0.28L1662.56 0.63L1664.67 1.12L1666.73 1.75L1668.76 2.51L1670.72 3.4L1672.63 4.42L1674.46 5.56L1676.22 6.82L1677.89 8.19L1679.46 9.66L1680.94 11.24L1682.31 12.91L1683.57 14.66L1684.71 16.5L1685.73 18.4L1686.62 20.37L1687.38 22.39L1688 24.46L1688.5 26.56L1688.85 28.69L1689.06 30.84L1682.1 -0L1679.39 -0L1679.39 76.99L1689.06 34.16L1688.85 36.31L1688.5 38.44L1688 40.54L1687.38 42.61L1686.62 44.63L1685.73 46.6L1684.71 48.5L1683.57 50.34L1682.31 52.09L1680.94 53.76L1679.46 55.34L1677.89 56.81L1676.22 58.18L1674.46 59.44L1672.63 60.58L1670.72 61.6L1668.76 62.49L1666.73 63.25L1664.67 63.88L1662.56 64.37L1660.43 64.72L1658.28 64.93L1656.27 65L1602.12 65L1602.12 47L1655.98 47L1657.11 46.96L1658.08 46.87L1659.05 46.71L1660.01 46.48L1660.94 46.2L1661.86 45.85L1662.76 45.45L1663.62 44.99L1664.46 44.47L1665.25 43.9L1666.01 43.27L1666.73 42.6L1667.4 41.89L1668.02 41.13L1668.59 40.33L1669.11 39.5L1669.57 38.63L1669.98 37.74L1670.32 36.82L1670.61 35.88L1670.83 34.93L1670.99 33.96L1671.09 32.98L1678.1 -0L1680.86 -0L1680.86 77.99L1671.09 32.02L1670.99 31.04L1670.83 30.07L1670.61 29.12L1670.32 28.18L1669.98 27.26L1669.57 26.37L1669.11 25.5L1668.59 24.67L1668.02 23.87L1667.4 23.11L1666.73 22.4L1666.01 21.73L1665.25 21.1L1664.46 20.53L1663.62 20.01L1662.76 19.55L1661.86 19.15L1660.94 18.8L1660.01 18.52L1659.05 18.29L1658.08 18.13L1657.11 18.04L1655.98 18L1602.12 18ZM1638.5 47L1648.12 47L1691.79 100L1668.46 100L1630.34 53.72ZM1767.12 -0L1767.12 59.85L1767.18 61.44L1767.32 62.87L1767.55 64.29L1767.88 65.69L1768.3 67.07L1768.8 68.42L1769.4 69.73L1770.08 71L1770.84 72.22L1771.67 73.39L1772.59 74.5L1773.57 75.55L1774.62 76.54L1775.73 77.45L1776.9 78.29L1778.13 79.05L1779.4 79.73L1780.71 80.32L1782.05 80.83L1783.43 81.25L1784.83 81.57L1786.25 81.81L1787.69 81.95L1789.27 82L1804.98 82L1806.56 81.95L1808 81.81L1809.42 81.57L1810.82 81.25L1812.19 80.83L1813.54 80.32L1814.85 79.73L1816.12 79.05L1817.34 78.29L1818.51 77.45L1819.63 76.54L1820.68 75.55L1821.66 74.5L1822.57 73.39L1823.41 72.22L1824.17 71L1824.85 69.73L1825.45 68.42L1825.95 67.07L1826.37 65.69L1826.7 64.29L1826.93 62.87L1827.07 61.44L1827.12 59.85L1827.12 -0L1845.12 -0L1845.12 60.15L1845.04 62.62L1844.79 65.22L1844.36 67.8L1843.77 70.35L1843.01 72.86L1842.08 75.31L1841 77.69L1839.77 80L1838.39 82.23L1836.86 84.35L1835.2 86.38L1833.41 88.29L1831.5 90.08L1829.48 91.74L1827.35 93.26L1825.13 94.65L1822.82 95.88L1820.43 96.96L1817.98 97.88L1815.48 98.64L1812.93 99.24L1810.35 99.66L1807.74 99.92L1805.27 100L1788.98 100L1786.51 99.92L1783.9 99.66L1781.32 99.24L1778.77 98.64L1776.27 97.88L1773.82 96.96L1771.43 95.88L1769.12 94.65L1766.9 93.26L1764.77 91.74L1762.75 90.08L1760.84 88.29L1759.05 86.38L1757.39 84.35L1755.86 82.23L1754.48 80L1753.25 77.69L1752.16 75.31L1751.24 72.86L1750.48 70.35L1749.89 67.8L1749.46 65.22L1749.21 62.62L1749.12 60.15L1749.12 -0ZM2006.12 18L1947.27 18L1945.69 18.05L1944.25 18.19L1942.83 18.43L1941.43 18.75L1940.05 19.17L1938.71 19.68L1937.4 20.27L1936.13 20.95L1934.9 21.71L1933.73 22.55L1932.62 23.46L1931.57 24.45L1930.59 25.5L1929.67 26.61L1928.84 27.78L1928.08 29L1927.4 30.27L1926.8 31.58L1926.3 32.93L1925.88 34.31L1925.55 35.71L1925.32 37.13L1925.18 38.56L1925.12 40.15L1925.12 59.85L1925.18 61.44L1925.32 62.87L1925.55 64.29L1925.88 65.69L1926.3 67.07L1926.8 68.42L1927.4 69.73L1928.08 71L1928.84 72.22L1929.67 73.39L1930.59 74.5L1931.57 75.55L1932.62 76.54L1933.73 77.45L1934.9 78.29L1936.13 79.05L1937.4 79.73L1938.71 80.32L1940.05 80.83L1941.43 81.25L1942.83 81.57L1944.25 81.81L1945.69 81.95L1947.27 82L2006.12 82L2006.12 100L1946.98 100L1944.51 99.92L1941.9 99.66L1939.32 99.24L1936.77 98.64L1934.27 97.88L1931.82 96.96L1929.43 95.88L1927.12 94.65L1924.9 93.26L1922.77 91.74L1920.75 90.08L1918.84 88.29L1917.05 86.38L1915.39 84.35L1913.86 82.23L1912.48 80L1911.25 77.69L1910.16 75.31L1909.24 72.86L1908.48 70.35L1907.89 67.8L1907.46 65.22L1907.21 62.62L1907.12 60.15L1907.12 39.85L1907.21 37.38L1907.46 34.78L1907.89 32.2L1908.48 29.65L1909.24 27.14L1910.16 24.69L1911.25 22.31L1912.48 20L1913.86 17.77L1915.39 15.65L1917.05 13.62L1918.84 11.71L1920.75 9.92L1922.77 8.26L1924.9 6.74L1927.12 5.35L1929.43 4.12L1931.82 3.04L1934.27 2.12L1936.77 1.36L1939.32 0.76L1941.9 0.34L1944.51 0.08L1946.98 0L2006.12 0ZM2064.12 0L2154.12 0L2154.12 18L2064.12 18ZM2100.12 100L2100.12 -0L2118.12 -0L2118.12 100ZM2282.98 18L2284.56 18.05L2286 18.19L2287.42 18.43L2288.82 18.75L2290.19 19.17L2291.54 19.68L2292.85 20.27L2294.12 20.95L2295.34 21.71L2296.51 22.55L2297.63 23.46L2298.68 24.45L2299.66 25.5L2300.57 26.61L2301.41 27.78L2302.17 29L2302.85 30.27L2303.45 31.58L2303.95 32.93L2304.37 34.31L2304.7 35.71L2304.93 37.13L2305.07 38.56L2305.12 40.15L2305.12 59.85L2305.07 61.44L2304.93 62.87L2304.7 64.29L2304.37 65.69L2303.95 67.07L2303.45 68.42L2302.85 69.73L2302.17 71L2301.41 72.22L2300.57 73.39L2299.66 74.5L2298.68 75.55L2297.63 76.54L2296.51 77.45L2295.34 78.29L2294.12 79.05L2292.85 79.73L2291.54 80.32L2290.19 80.83L2288.82 81.25L2287.42 81.57L2286 81.81L2284.56 81.95L2282.98 82L2253.27 82L2251.69 81.95L2250.25 81.81L2248.83 81.57L2247.43 81.25L2246.05 80.83L2244.71 80.32L2243.4 79.73L2242.13 79.05L2240.9 78.29L2239.73 77.45L2238.62 76.54L2237.57 75.55L2236.59 74.5L2235.67 73.39L2234.84 72.22L2234.08 71L2233.4 69.73L2232.8 68.42L2232.3 67.07L2231.88 65.69L2231.55 64.29L2231.32 62.87L2231.18 61.44L2231.12 59.85L2231.12 40.15L2231.18 38.56L2231.32 37.13L2231.55 35.71L2231.88 34.31L2232.3 32.93L2232.8 31.58L2233.4 30.27L2234.08 29L2234.84 27.78L2235.67 26.61L2236.59 25.5L2237.57 24.45L2238.62 23.46L2239.73 22.55L2240.9 21.71L2242.13 20.95L2243.4 20.27L2244.71 19.68L2246.05 19.17L2247.43 18.75L2248.83 18.43L2250.25 18.19L2251.69 18.05L2253.27 18ZM2252.98 0L2250.51 0.08L2247.9 0.34L2245.32 0.76L2242.77 1.36L2240.27 2.12L2237.82 3.04L2235.43 4.12L2233.12 5.35L2230.9 6.74L2228.77 8.26L2226.75 9.92L2224.84 11.71L2223.05 13.62L2221.39 15.65L2219.86 17.77L2218.48 20L2217.25 22.31L2216.16 24.69L2215.24 27.14L2214.48 29.65L2213.89 32.2L2213.46 34.78L2213.21 37.38L2213.12 39.85L2213.12 60.15L2213.21 62.62L2213.46 65.22L2213.89 67.8L2214.48 70.35L2215.24 72.86L2216.16 75.31L2217.25 77.69L2218.48 80L2219.86 82.23L2221.39 84.35L2223.05 86.38L2224.84 88.29L2226.75 90.08L2228.77 91.74L2230.9 93.26L2233.12 94.65L2235.43 95.88L2237.82 96.96L2240.27 97.88L2242.77 98.64L2245.32 99.24L2247.9 99.66L2250.51 99.92L2252.98 100L2283.27 100L2285.74 99.92L2288.35 99.66L2290.93 99.24L2293.48 98.64L2295.98 97.88L2298.43 96.96L2300.82 95.88L2303.13 94.65L2305.35 93.26L2307.48 91.74L2309.5 90.08L2311.41 88.29L2313.2 86.38L2314.86 84.35L2316.39 82.23L2317.77 80L2319 77.69L2320.08 75.31L2321.01 72.86L2321.77 70.35L2322.36 67.8L2322.79 65.22L2323.04 62.62L2323.12 60.15L2323.12 39.85L2323.04 37.38L2322.79 34.78L2322.36 32.2L2321.77 29.65L2321.01 27.14L2320.08 24.69L2319 22.31L2317.77 20L2316.39 17.77L2314.86 15.65L2313.2 13.62L2311.41 11.71L2309.5 9.92L2307.48 8.26L2305.35 6.74L2303.13 5.35L2300.82 4.12L2298.43 3.04L2295.98 2.12L2293.48 1.36L2290.93 0.76L2288.35 0.34L2285.74 0.08L2283.27 0ZM2385.12 100L2385.12 -0L2403.12 -0L2403.12 100ZM2394.12 0L2448.27 0L2450.28 0.07L2452.43 0.28L2454.56 0.63L2456.67 1.12L2458.73 1.75L2460.76 2.51L2462.72 3.4L2464.63 4.42L2466.46 5.56L2468.22 6.82L2469.89 8.19L2471.46 9.66L2472.94 11.24L2474.31 12.91L2475.57 14.66L2476.71 16.5L2477.73 18.4L2478.62 20.37L2479.38 22.39L2480 24.46L2480.5 26.56L2480.85 28.69L2481.06 30.84L2474.1 -0L2471.39 -0L2471.39 76.99L2481.06 34.16L2480.85 36.31L2480.5 38.44L2480 40.54L2479.38 42.61L2478.62 44.63L2477.73 46.6L2476.71 48.5L2475.57 50.34L2474.31 52.09L2472.94 53.76L2471.46 55.34L2469.89 56.81L2468.22 58.18L2466.46 59.44L2464.63 60.58L2462.72 61.6L2460.76 62.49L2458.73 63.25L2456.67 63.88L2454.56 64.37L2452.43 64.72L2450.28 64.93L2448.27 65L2394.12 65L2394.12 47L2447.98 47L2449.11 46.96L2450.08 46.87L2451.05 46.71L2452.01 46.48L2452.94 46.2L2453.86 45.85L2454.76 45.45L2455.62 44.99L2456.46 44.47L2457.25 43.9L2458.01 43.27L2458.73 42.6L2459.4 41.89L2460.02 41.13L2460.59 40.33L2461.11 39.5L2461.57 38.63L2461.98 37.74L2462.32 36.82L2462.61 35.88L2462.83 34.93L2462.99 33.96L2463.09 32.98L2470.1 -0L2472.86 -0L2472.86 77.99L2463.09 32.02L2462.99 31.04L2462.83 30.07L2462.61 29.12L2462.32 28.18L2461.98 27.26L2461.57 26.37L2461.11 25.5L2460.59 24.67L2460.02 23.87L2459.4 23.11L2458.73 22.4L2458.01 21.73L2457.25 21.1L2456.46 20.53L2455.62 20.01L2454.76 19.55L2453.86 19.15L2452.94 18.8L2452.01 18.52L2451.05 18.29L2450.08 18.13L2449.11 18.04L2447.98 18L2394.12 18ZM2430.5 47L2440.12 47L2483.79 100L2460.46 100L2422.34 53.72Z"/></svg>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#first-lesson">First lesson</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#instructors">Your instructor</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-extra">
+        <a class="btn" href="#book">Book a lesson<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <a class="btn btn-line" href="tel:+447982976744">Call +44 7982 976744</a>
+        <p>Automatic lessons across Liverpool.</p>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+447982976744"><span>Call or WhatsApp</span>+44 7982 976744</a>
+      <a class="btn" href="#book">Book a lesson</a>
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+        <span class="visually-hidden">Menu</span>
+        <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 16h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero dark" aria-labelledby="hero-title">
+    <div class="wrap grid hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Automatic lessons · Liverpool</p>
+        <h1 id="hero-title">
+          <span class="line"><span>Driving</span></span>
+          <span class="line"><span>lessons in</span></span>
+          <span class="line"><span><em>Liverpool.</em></span></span>
+        </h1>
+        <p class="lede">I'm Ahmad, your automatic driving instructor in Liverpool. Calm, structured lessons on the roads and test routes you'll actually face.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#book">Book your first lesson<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="btn btn-line" href="#lessons">Explore lessons</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="plate" data-hero-plate>
+          <span class="l-v"></span><span class="l-h"></span>
+          <p class="plate-label">Ahmad<span>Liverpool</span></p>
+        </div>
+        <a class="seal" href="#book" tabindex="-1">
+          <svg class="seal-ring" viewBox="0 0 140 140">
+            <defs><path id="seal-path" d="M70 70m-55 0a55 55 0 1 1 110 0a55 55 0 1 1-110 0"/></defs>
+            <circle cx="70" cy="70" r="45" fill="none" stroke="currentColor" stroke-width=".8" opacity=".35"/>
+            <text><textPath href="#seal-path" textLength="342">BOOK YOUR FIRST LESSON · LEARN TO DRIVE ·</textPath></text>
+          </svg>
+          <svg class="seal-mark" viewBox="0 0 1000 1000" aria-hidden="true"><g transform="translate(500 500) scale(0.9314) translate(-585.0 -484.0)"><mask id="seal" maskUnits="userSpaceOnUse" x="0" y="0" width="1100" height="1000"><rect width="1100" height="1000" fill="#fff"/><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#000" stroke="#000" stroke-width="28" stroke-linejoin="round"/></mask><g mask="url(#seal)" fill="currentColor"><path d="M385 280 L553.1 634 C564.5 658 575.4 664 613 664 L613 680 L439 680 L439 664 C455.4 664 460.5 658 449.1 634 L364.2 455.1 L283.7 634 C272.9 658 278.2 664 295 664 L295 680 L167 680 L167 664 C204.2 664 214.9 658 225.7 634 Z"/><path d="M640 280 L812 280 C900.3 280 972 369.6 972 480.0 C972 590.4 900.3 680 812 680 L640 680 L640 664 C664 664 672 658 672 634 L672 326 C672 302 664 296 640 296 Z M764 326 L764 634 L809 634 C839.4 634 864 565 864 480.0 C864 395 839.4 326 809 326 Z" fill-rule="evenodd"/></g><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#F3F0E9"/></g></svg>
+        </a>
+        <div class="car" data-hero-car>
+          <div class="car-drive">
+            <span class="car-shadow"></span>
+            <picture>
+              <source type="image/webp" srcset="images/opt/car-cutout-720.webp 720w, images/opt/car-cutout-1200.webp 993w" sizes="(max-width: 900px) 100vw, 58vw">
+              <img src="images/opt/car-cutout-1200.png" width="993" height="527" alt="" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </div>
+        <span class="floor-line"></span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ul class="hero-facts" aria-label="What to expect">
+        <li><strong>Automatic only</strong>No clutch and no gear changes, so more of your attention stays on the road.</li>
+        <li><strong>Local test routes</strong>Practise on the roads around the test centre you'll actually use.</li>
+        <li><strong>Nervous learners welcome</strong>Start on quiet streets and build up at your own pace.</li>
+        <li class="scroll-li" style="list-style:none"><a class="scroll-cue" href="#lessons" aria-label="Scroll to lessons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ LESSONS ============ -->
+  <section class="section lessons" id="lessons" aria-labelledby="lessons-title">
+    <div class="wrap">
+      <div class="grid section-head">
+        <p class="eyebrow" data-reveal>Driving lessons</p>
+        <h2 id="lessons-title" data-reveal>Lessons that start from where you are now.</h2>
+        <p class="lede muted" data-reveal style="--d:.1s">Whether you've never sat in the driver's seat or you passed years ago and want your confidence back, every course is planned around you.</p>
+      </div>
+
+      <div class="lesson-list">
+        <article class="lesson" aria-labelledby="l-beginner" data-reveal>
+          <span class="lesson-num" aria-hidden="true"></span>
+          <div class="lesson-head">
+            <h3 id="l-beginner">Beginner lessons</h3>
+            <p class="for">No experience needed</p>
+          </div>
+          <div class="lesson-body">
+            <p>Your first lessons cover the basics properly: getting comfortable in the car, moving off and stopping, steering and simple junctions. We start on quiet roads and only move on when you're ready.</p>
+            <ul class="lesson-points">
+              <li>Just your provisional licence</li>
+              <li>Clear goals for every lesson</li>
+              <li>Theory test guidance</li>
+            </ul>
+          </div>
+          <a class="lesson-go" href="#book" data-lesson="Beginner lessons" aria-label="Ask about beginner lessons"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </article>
+
+        <article class="lesson" aria-labelledby="l-intensive" data-reveal>
+          <span class="lesson-num" aria-hidden="true"></span>
+          <div class="lesson-head">
+            <h3 id="l-intensive">Intensive courses</h3>
+            <p class="for">For learners who want momentum</p>
+          </div>
+          <div class="lesson-body">
+            <p>Several hours of driving each week, over a shorter period. Good if you learn best with momentum, or have a job or university place waiting.</p>
+            <p class="muted">We'll be honest about realistic timescales. They depend on your experience and on test availability at your local centre.</p>
+          </div>
+          <a class="lesson-go" href="#book" data-lesson="Intensive course" aria-label="Ask about intensive courses"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </article>
+
+        <article class="lesson" aria-labelledby="l-refresher" data-reveal>
+          <span class="lesson-num" aria-hidden="true"></span>
+          <div class="lesson-head">
+            <h3 id="l-refresher">Refresher lessons</h3>
+            <p class="for">For drivers who already hold a licence</p>
+          </div>
+          <div class="lesson-body">
+            <p>Not driven for a while, moved to the city, or nervous about motorways and big roundabouts? A few focused lessons can make a real difference.</p>
+          </div>
+          <a class="lesson-go" href="#book" data-lesson="Refresher lessons" aria-label="Ask about refresher lessons"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </article>
+
+        <article class="lesson" aria-labelledby="l-test" data-reveal>
+          <span class="lesson-num" aria-hidden="true"></span>
+          <div class="lesson-head">
+            <h3 id="l-test">Test preparation</h3>
+            <p class="for">For learners with a test date coming up</p>
+          </div>
+          <div class="lesson-body">
+            <p>Mock tests on local routes, independent driving with a sat nav, manoeuvres and the show me, tell me questions, so the 40 minutes on the day feel familiar.</p>
+          </div>
+          <a class="lesson-go" href="#book" data-lesson="Test preparation" aria-label="Ask about test preparation"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GEARBOX ============ -->
+  <section class="section gearbox dark" aria-labelledby="gearbox-title">
+    <div class="wrap grid gearbox-grid">
+      <div class="gearbox-copy">
+        <p class="eyebrow" data-reveal>How you'll learn</p>
+        <h2 id="gearbox-title" data-reveal>Automatic lessons only.</h2>
+        <p data-reveal style="--d:.08s">Every lesson is in an automatic car. With no clutch to control and no gears to change, you can put all your attention on the road, other traffic and your observations.</p>
+      </div>
+
+      <div class="gear-stage" data-reveal="fade" style="--d:.2s">
+        <div class="gear-panel">
+          <span class="gear-letter" aria-hidden="true">A</span>
+          <h3>Why automatic?</h3>
+          <p>Fewer things to manage at once makes learning calmer, especially in Liverpool's stop-start city traffic.</p>
+          <ul class="ticks">
+            <li>Less to think about while you learn</li>
+            <li>Smooth, relaxed driving in queues and on hills</li>
+            <li>Lessons in a quiet, smooth hybrid car</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FIRST LESSON / NERVOUS LEARNERS ============ -->
+  <section class="section first" id="first-lesson" aria-labelledby="first-title">
+    <div class="wrap">
+      <div class="grid first-grid">
+        <div class="first-copy">
+          <div class="first-head">
+            <p class="eyebrow" data-reveal>Nervous learners</p>
+            <h2 id="first-title" data-reveal>Nervous? You&#8217;re in calm hands.</h2>
+          </div>
+          <div class="first-intro">
+            <p class="lede" data-reveal style="--d:.08s">Many of my learners start after a bad experience, a long break or years of putting it off. We go at your pace, and you won&#8217;t face busy roads until you&#8217;re ready.</p>
+          </div>
+          <ul class="ticks" data-reveal style="--d:.14s">
+            <li><span><strong>Explained until it clicks.</strong>Clear, step-by-step explanations at your pace, repeated as often as you need.</span></li>
+            <li><span><strong>Lessons around your life.</strong>Early mornings, evenings and weekends, planned around school, shifts and childcare wherever possible.</span></li>
+            <li><span><strong>Progress you can see.</strong>Each lesson builds on the last, so you always know what we&#8217;re working on and why.</span></li>
+          </ul>
+        </div>
+        <figure class="first-photo" data-reveal>
+          <div class="pass-carousel is-paused" data-carousel role="region" aria-roledescription="carousel" aria-label="Learners who passed with Ahmad">
+            <div class="pass-stage" tabindex="0" aria-label="Pass photos. Use the left and right arrow keys to browse.">
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 1 of 34"><img src="images/opt/passes/pass-01.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 2 of 34"><img src="images/opt/passes/pass-02.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 3 of 34"><img src="images/opt/passes/pass-03.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 4 of 34"><img data-src="images/opt/passes/pass-04.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 5 of 34"><img data-src="images/opt/passes/pass-05.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 6 of 34"><img data-src="images/opt/passes/pass-06.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 7 of 34"><img data-src="images/opt/passes/pass-07.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 8 of 34"><img data-src="images/opt/passes/pass-08.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 9 of 34"><img data-src="images/opt/passes/pass-09.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 10 of 34"><img data-src="images/opt/passes/pass-10.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 11 of 34"><img data-src="images/opt/passes/pass-11.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 12 of 34"><img data-src="images/opt/passes/pass-12.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 13 of 34"><img data-src="images/opt/passes/pass-13.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 14 of 34"><img data-src="images/opt/passes/pass-14.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 15 of 34"><img data-src="images/opt/passes/pass-15.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 16 of 34"><img data-src="images/opt/passes/pass-16.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 17 of 34"><img data-src="images/opt/passes/pass-17.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 18 of 34"><img data-src="images/opt/passes/pass-18.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 19 of 34"><img data-src="images/opt/passes/pass-19.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 20 of 34"><img data-src="images/opt/passes/pass-20.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 21 of 34"><img data-src="images/opt/passes/pass-21.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 22 of 34"><img data-src="images/opt/passes/pass-22.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 23 of 34"><img data-src="images/opt/passes/pass-23.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 24 of 34"><img data-src="images/opt/passes/pass-24.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 25 of 34"><img data-src="images/opt/passes/pass-25.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 26 of 34"><img data-src="images/opt/passes/pass-26.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 27 of 34"><img data-src="images/opt/passes/pass-27.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 28 of 34"><img data-src="images/opt/passes/pass-28.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 29 of 34"><img data-src="images/opt/passes/pass-29.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 30 of 34"><img data-src="images/opt/passes/pass-30.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 31 of 34"><img data-src="images/opt/passes/pass-31.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 32 of 34"><img data-src="images/opt/passes/pass-32.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 33 of 34"><img src="images/opt/passes/pass-33.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+              <div class="pass-slide" role="group" aria-roledescription="slide" aria-label="Photo 34 of 34"><img src="images/opt/passes/pass-34.webp" width="520" height="650" decoding="async" draggable="false" alt="A learner holding a driving test pass certificate next to the tuition car"></div>
+            </div>
+            <div class="pass-nav">
+              <button type="button" class="pass-btn" data-prev aria-label="Previous photo"><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+              <div class="pass-status" aria-hidden="true">
+                <span class="pass-num" data-current>01</span>
+                <span class="pass-timer"><i></i></span>
+                <span class="pass-num pass-total">34</span>
+              </div>
+              <button type="button" class="pass-btn" data-next aria-label="Next photo"><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <div class="route" data-route>
+        <h3 data-reveal>How your first lesson works</h3>
+        <div class="road" aria-hidden="true">
+          <div class="road-track"><span class="road-progress"></span></div>
+          <div class="road-stops"><span></span><span></span><span></span></div>
+          <svg class="road-car"><use href="#car-line"/></svg>
+        </div>
+        <ol class="steps">
+          <li data-reveal>
+            <h4>We talk first</h4>
+            <p>A quick call to understand any experience you have, what worries you and when you're free.</p>
+          </li>
+          <li data-reveal style="--d:.1s">
+            <h4>A calm first drive</h4>
+            <p>I&#8217;ll pick you up from home, school, college or work, and we start on quiet roads, so you can get to know the car before going anywhere busy.</p>
+          </li>
+          <li data-reveal style="--d:.2s">
+            <h4>A plan you agree with</h4>
+            <p>At the end, we talk about how it went and what comes next. There's no pressure to book a block of lessons.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCAL ROADS ============ -->
+  <section class="section local dark" id="areas" aria-labelledby="local-title">
+    <div class="wrap grid local-grid">
+      <div class="local-copy">
+        <p class="eyebrow" data-reveal>Local roads</p>
+        <h2 id="local-title" data-reveal>Learn on the roads you'll be tested on.</h2>
+        <p class="lede" data-reveal style="--d:.08s">Liverpool&#8217;s roads can be busy. We practise every kind of road together, step by step, so nothing is new on your test day.</p>
+        <ul class="road-types">
+          <li data-reveal>
+            <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 27V13l6-5 6 5v14M15 27V13l6-5 6 5v14M1 27h30M7 18h4M19 18h4"/></svg>
+            <strong>Terraced streets</strong>Parked cars on both sides, tight gaps and knowing when to wait.</li>
+          <li data-reveal style="--d:.08s">
+            <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3v26M26 3v26M16 4v3M16 11v3M16 18v3M16 25v3"/><path d="M11 20V10m0 0-3 3m3-3 3 3"/></svg>
+            <strong>Bus lanes and one-way systems</strong>Reading signs and road markings early, especially near the city centre.</li>
+          <li data-reveal style="--d:.16s">
+            <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><circle cx="16" cy="16" r="5"/><circle cx="16" cy="16" r="10.5"/><path d="M16 1v4.5M16 26.5V31M1 16h4.5M26.5 16H31"/></svg>
+            <strong>Multi-lane roundabouts</strong>Choosing the right lane, signalling clearly and keeping your position.</li>
+          <li data-reveal style="--d:.24s">
+            <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 29 11 3M29 29 21 3M16 3v4M16 12v5M16 22v7"/></svg>
+            <strong>Dual carriageways</strong>Joining at speed, changing lanes and leaving safely.</li>
+        </ul>
+      </div>
+
+      <div class="local-media">
+        <figure class="main">
+          <div class="frame" data-reveal="mask">
+            <picture>
+              <source type="image/webp" srcset="images/opt/icon.webp">
+              <img src="images/icon.jpeg" width="640" height="640" loading="lazy" decoding="async"
+                   alt="Red tuition car parked on a viewpoint with the Liverpool skyline and tower blocks behind">
+            </picture>
+          </div>
+        </figure>
+      </div>
+
+      <div class="areas">
+        <div>
+          <h3 data-reveal>Where we teach</h3>
+          <p class="area-city" data-reveal style="--d:.08s">Liverpool</p>
+          <ul class="area-codes" data-reveal style="--d:.14s" aria-label="Postcode areas covered">
+            <li>L4</li>
+            <li>L5</li>
+            <li>L6</li>
+            <li>L11</li>
+            <li>L20</li>
+            <li>L21</li>
+            <li class="more">and more</li>
+          </ul>
+        </div>
+        <div class="areas-cta" data-reveal style="--d:.16s">
+          <p>Not sure if I cover your street? Send me your postcode and I&#8217;ll let you know.</p>
+          <a class="btn btn-light" href="#book">Check your postcode<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ YOUR INSTRUCTOR ============ -->
+  <section class="section trust" id="instructors" aria-labelledby="trust-title">
+    <div class="wrap">
+      <div class="grid section-head">
+        <p class="eyebrow" data-reveal>Your instructor</p>
+        <h2 id="trust-title" data-reveal>One instructor, from first lesson to test day.</h2>
+        <p class="lede muted" data-reveal style="--d:.1s">You learn with me every time. No handovers and no starting again with someone new, just one familiar face who knows exactly where you are.</p>
+      </div>
+
+      <div class="grid trust-grid">
+        <figure class="instructor-photo" data-reveal="fade">
+          <div class="frame">
+            <img src="images/opt/instructor.webp" width="1000" height="1000" loading="lazy" decoding="async"
+                 alt="Ahmad, driving instructor, standing beside his red hybrid tuition car">
+          </div>
+          <figcaption class="instructor-tag"><span>Ahmad</span>Automatic driving instructor</figcaption>
+        </figure>
+
+        <article class="instructor" aria-labelledby="instructor-name">
+          <h3 id="instructor-name" data-reveal>Hi, I&#8217;m Ahmad.</h3>
+          <p class="instructor-intro" data-reveal style="--d:.06s">I teach automatic lessons across Liverpool in a modern, quiet hybrid car. Every lesson is planned around you: your pace, your worries and your goals.</p>
+          <p class="muted" data-reveal style="--d:.1s">My aim is simple. You leave each lesson a little more confident than you arrived, and you walk into your test knowing you&#8217;re ready.</p>
+          <dl class="facts" data-reveal style="--d:.14s">
+            <div><dt>Lessons</dt><dd>Automatic only</dd></div>
+            <div><dt>Car</dt><dd>Modern hybrid</dd></div>
+            <div><dt>Area</dt><dd>Liverpool</dd></div>
+            <div><dt>Pick-up</dt><dd>Home, school, college or work</dd></div>
+          </dl>
+          <a class="btn" href="#book" data-reveal style="--d:.18s">Book your first lesson<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOK ============ -->
+  <section class="section book" id="contact" aria-labelledby="book-title">
+    <div class="wrap grid book-grid">
+      <div class="book-copy">
+        <h2 id="book-title" data-reveal>Book your first lesson.</h2>
+        <p class="lede" data-reveal style="--d:.08s">Tell me a little about yourself and I&#8217;ll call you back to find a time that works. No obligation, and no need to book a block.</p>
+        <dl class="contact-list" data-reveal style="--d:.14s">
+          <div><dt><svg class="ci" aria-hidden="true"><use href="#i-phone"/></svg>Call</dt><dd><a href="tel:+447982976744">+44 7982 976744</a></dd></div>
+          <div><dt><svg class="ci" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</dt><dd><a href="https://wa.me/447982976744" target="_blank" rel="noopener">+44 7982 976744</a></dd></div>
+          <div><dt><svg class="ci" aria-hidden="true"><use href="#i-mail"/></svg>Email</dt><dd><a href="mailto:ahmed.dandoush123@gmail.com">ahmed.dandoush123@gmail.com</a></dd></div>
+          <div><dt><svg class="ci" aria-hidden="true"><use href="#i-clock"/></svg>Lesson times</dt><dd>Early mornings, evenings and weekends</dd></div>
+        </dl>
+        <div class="book-drive" aria-hidden="true">
+          <span class="speed"><i></i><i></i><i></i></span>
+          <svg class="book-car" viewBox="0 0 120 56" data-draw>
+            <g class="car-body">
+              <path d="M12 42C11 36 11.5 31 13 28C15 22 18 17 24 14.5C34 12.8 50 12.5 62 13C66 13.3 70 16 79 25C90 26.5 100 28 105 31C108.5 33 110 36.5 109.5 42H101A11 11 0 0 0 79 42H41A11 11 0 0 0 19 42Z"/>
+              <path d="M20 26C21.5 21.5 23.5 18.5 27 17.3C36 16 50 15.8 60 16.2C63.5 16.5 66.5 18.5 74 26Z"/>
+              <path d="M47 16V26"/>
+              <path d="M35 12.8L37 5.5H53L55 12.6"/>
+              <path d="M100 30L106 32"/>
+            </g>
+            <g class="wheel"><circle cx="30" cy="42" r="8.2"/><circle class="rim" cx="30" cy="42" r="5.6"/><circle class="hub" cx="30" cy="42" r="1.6"/><path class="spokes" d="M30 40.1L30 37 M31.81 41.41L34.76 40.45 M31.12 43.54L32.94 46.05 M28.88 43.54L27.06 46.05 M28.19 41.41L25.24 40.45"/></g>
+            <g class="wheel"><circle cx="90" cy="42" r="8.2"/><circle class="rim" cx="90" cy="42" r="5.6"/><circle class="hub" cx="90" cy="42" r="1.6"/><path class="spokes" d="M90 40.1L90 37 M91.81 41.41L94.76 40.45 M91.12 43.54L92.94 46.05 M88.88 43.54L87.06 46.05 M88.19 41.41L85.24 40.45"/></g>
+          </svg>
+          <span class="road"></span>
+        </div>
+      </div>
+
+      <form class="form-card" id="book" novalidate aria-labelledby="form-title" data-reveal style="--d:.1s">
+        <h3 id="form-title">Request a call back</h3>
+        <p>It takes about a minute. Fields marked optional can be left blank.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="error" id="f-name-err" hidden>Enter your name so we know who to ask for.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-phone-err">
+            <p class="error" id="f-phone-err" hidden>Enter a phone number we can call you back on.</p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-postcode">Postcode</label>
+            <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" required aria-describedby="f-postcode-err">
+            <p class="error" id="f-postcode-err" hidden>Enter your postcode so we can check we cover your area.</p>
+          </div>
+          <div class="field">
+            <label for="f-type">Type of lesson</label>
+            <select id="f-type" name="lesson_type">
+              <option>Beginner lessons</option>
+              <option>Intensive course</option>
+              <option>Refresher lessons</option>
+              <option>Test preparation</option>
+              <option selected>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <label for="f-msg">Anything we should know? <span class="hint">(optional)</span></label>
+          <textarea id="f-msg" name="message" rows="3"></textarea>
+        </div>
+
+        <button class="btn" type="submit">Request a call back<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></button>
+        <p class="form-small">I&#8217;ll only use your details to contact you about lessons. Read the <a href="privacy.html">privacy policy</a>.</p>
+        <p class="form-status" id="form-status" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer dark">
+  <div class="wrap">
+    <div class="grid footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Ahmad, driving instructor, back to top">
+          <svg class="brand-mark" viewBox="0 0 1000 1000" aria-hidden="true"><circle cx="500" cy="500" r="453" fill="none" stroke="#C8102E" stroke-width="34"/><g transform="translate(500 500) scale(0.8967) translate(-585.0 -484.0)"><mask id="bm1" maskUnits="userSpaceOnUse" x="0" y="0" width="1100" height="1000"><rect width="1100" height="1000" fill="#fff"/><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#000" stroke="#000" stroke-width="28" stroke-linejoin="round"/></mask><g mask="url(#bm1)" fill="#F3F0E9"><path d="M385 280 L553.1 634 C564.5 658 575.4 664 613 664 L613 680 L447 680 L447 664 C463.4 664 468.5 658 457.1 634 L360.9 431.4 L269.7 634 C258.9 658 264.2 664 281 664 L281 680 L167 680 L167 664 C204.2 664 214.9 658 225.7 634 Z"/><path d="M640 280 L812 280 C900.3 280 972 369.6 972 480.0 C972 590.4 900.3 680 812 680 L640 680 L640 664 C664 664 672 658 672 634 L672 326 C672 302 664 296 640 296 Z M764 316 L764 644 L809 644 C843.8 644 872 570.5 872 480.0 C872 389.5 843.8 316 809 316 Z" fill-rule="evenodd"/></g><path d="M158 598 C162.2 597.2 174.7 594.7 183.1 593 C191.5 591.3 199.9 589.6 208.2 588 C216.6 586.3 225 584.6 233.4 582.9 C241.7 581.3 250.1 579.6 258.5 577.9 C266.8 576.2 275.2 574.5 283.6 572.9 C292 571.2 300.3 569.5 308.7 567.8 C317.1 566.1 325.5 564.5 333.8 562.8 C342.2 561.1 350.6 559.4 358.9 557.6 C367.3 555.9 375.7 554.2 384.1 552.4 C392.4 550.6 400.8 548.8 409.2 546.8 C417.5 544.8 425.9 542.9 434.3 540.6 C442.7 538.4 451 536.1 459.4 533.2 C467.8 530.3 476.2 527.3 484.5 523.3 C492.9 519.3 501.3 514.8 509.6 509.1 C518 503.4 526.4 496.5 534.8 488.9 C543.1 481.2 551.5 471.9 559.9 463 C568.3 454.2 576.6 444.2 585 435.8 C593.4 427.4 601.7 419.3 610.1 412.6 C618.5 406 626.9 400.6 635.2 395.9 C643.6 391.3 652 387.9 660.4 384.9 C668.7 381.8 677.1 379.6 685.5 377.7 C693.8 375.7 702.2 374.2 710.6 372.9 C719 371.6 727.3 370.6 735.7 369.7 C744.1 368.8 752.5 368.2 760.8 367.6 C769.2 367.1 777.6 366.7 785.9 366.5 C794.3 366.2 802.7 366.1 811.1 366.1 C819.4 366.1 827.8 366.2 836.2 366.4 C844.5 366.6 852.9 367 861.3 367.4 C869.7 367.9 878 368.5 886.4 369.1 C894.8 369.8 903.2 370.6 911.5 371.5 C919.9 372.5 928.3 373.5 936.6 374.6 C945 375.8 953.4 377 961.8 378.4 C970.1 379.7 978.5 381.2 986.9 382.8 C995.3 384.4 1007.8 387.1 1012 387.9 L1012 387.9 C1007.8 389.4 995.3 394.3 986.9 396.5 C978.5 398.7 970.1 399.8 961.8 401.2 C953.4 402.6 945 403.9 936.6 405.1 C928.3 406.3 919.9 407.5 911.5 408.7 C903.2 409.8 894.8 410.9 886.4 412.1 C878 413.2 869.7 414.3 861.3 415.4 C852.9 416.4 844.5 417.5 836.2 418.6 C827.8 419.7 819.4 420.8 811.1 421.9 C802.7 422.9 794.3 424 785.9 425.2 C777.6 426.3 769.2 427.4 760.8 428.6 C752.5 429.8 744.1 430.9 735.7 432.2 C727.3 433.6 719 434.9 710.6 436.4 C702.2 438 693.8 439.6 685.5 441.6 C677.1 443.7 668.7 445.8 660.4 448.7 C652 451.6 643.6 454.8 635.2 459.1 C626.9 463.5 618.5 468.5 610.1 474.8 C601.7 481 593.4 488.6 585 496.4 C576.6 504.2 568.3 513.5 559.9 521.6 C551.5 529.7 543.1 538.2 534.8 545.1 C526.4 551.9 518 557.8 509.6 562.6 C501.3 567.4 492.9 570.8 484.5 573.8 C476.2 576.8 467.8 578.7 459.4 580.5 C451 582.2 442.7 583.3 434.3 584.4 C425.9 585.5 417.5 586.2 409.2 586.9 C400.8 587.6 392.4 588.1 384.1 588.7 C375.7 589.2 367.3 589.6 358.9 590 C350.6 590.4 342.2 590.7 333.8 591.1 C325.5 591.4 317.1 591.7 308.7 592 C300.3 592.3 292 592.6 283.6 592.9 C275.2 593.2 266.8 593.5 258.5 593.8 C250.1 594.1 241.7 594.4 233.4 594.7 C225 595 216.6 595.3 208.2 595.7 C199.9 596 191.5 596.3 183.1 596.7 C174.7 597.1 162.2 597.8 158 598 Z" fill="#C8102E"/></g></svg>
+          <svg class="brand-name" viewBox="0 0 1291.57 192" aria-hidden="true"><path fill="currentColor" d="M0 100L50 -0L73.48 -0L23.48 100ZM73.48 -0L123.48 100L100 100L50 -0ZM27.74 57.5L95.74 57.5L95.74 78.5L27.74 78.5ZM145.48 100L145.48 -0L166.48 -0L166.48 100ZM218.48 100L218.48 -0L239.48 -0L239.48 100ZM155.98 39.5L228.98 39.5L228.98 60.5L155.98 60.5ZM265.48 100L265.48 -0L287.65 -0L324.48 75.94L361.31 -0L383.48 -0L383.48 100L362.48 100L362.48 45.71L336.15 100L312.81 100L286.48 45.71L286.48 100ZM405.48 100L455.48 -0L478.96 -0L428.96 100ZM478.96 -0L528.96 100L505.48 100L455.48 -0ZM433.22 57.5L501.22 57.5L501.22 78.5L433.22 78.5ZM550.96 100L550.96 -0L571.96 -0L571.96 100ZM561.46 0L611.13 0L613.57 0.08L616.18 0.34L618.76 0.76L621.31 1.36L623.82 2.12L626.27 3.04L628.65 4.12L630.96 5.35L633.18 6.74L635.31 8.26L637.33 9.92L639.25 11.71L641.04 13.62L642.7 15.65L644.22 17.77L645.6 20L646.84 22.31L647.92 24.69L648.84 27.14L649.6 29.65L650.19 32.2L650.62 34.78L650.88 37.38L650.96 39.83L650.96 60.17L650.88 62.62L650.62 65.22L650.19 67.8L649.6 70.35L648.84 72.86L647.92 75.31L646.84 77.69L645.6 80L644.22 82.23L642.7 84.35L641.04 86.38L639.25 88.29L637.33 90.08L635.31 91.74L633.18 93.26L630.96 94.65L628.65 95.88L626.27 96.96L623.82 97.88L621.31 98.64L618.76 99.24L616.18 99.66L613.57 99.92L611.13 100L561.46 100L561.46 79L610.79 79L612.2 78.95L613.44 78.83L614.66 78.63L615.87 78.35L617.06 77.99L618.23 77.55L619.36 77.04L620.45 76.45L621.51 75.79L622.52 75.07L623.48 74.28L624.39 73.43L625.24 72.52L626.03 71.56L626.75 70.55L627.41 69.5L627.99 68.4L628.51 67.27L628.94 66.11L629.3 64.92L629.59 63.71L629.79 62.48L629.91 61.24L629.96 59.83L629.96 40.17L629.91 38.76L629.79 37.52L629.59 36.29L629.3 35.08L628.94 33.89L628.51 32.73L627.99 31.6L627.41 30.5L626.75 29.45L626.03 28.44L625.24 27.48L624.39 26.57L623.48 25.72L622.52 24.93L621.51 24.21L620.45 23.55L619.36 22.96L618.23 22.45L617.06 22.01L615.87 21.65L614.66 21.37L613.44 21.17L612.2 21.05L610.79 21L561.46 21Z"/><path fill="currentColor" opacity=".72" transform="translate(0 140) scale(0.52)" d="M0 100L0 -0L18 -0L18 100ZM9 0L60.15 0L62.62 0.08L65.22 0.34L67.8 0.76L70.35 1.36L72.86 2.12L75.31 3.04L77.69 4.12L80 5.35L82.23 6.74L84.35 8.26L86.38 9.92L88.29 11.71L90.08 13.62L91.74 15.65L93.26 17.77L94.65 20L95.88 22.31L96.96 24.69L97.88 27.14L98.64 29.65L99.24 32.2L99.66 34.78L99.92 37.38L100 39.85L100 60.15L99.92 62.62L99.66 65.22L99.24 67.8L98.64 70.35L97.88 72.86L96.96 75.31L95.88 77.69L94.65 80L93.26 82.23L91.74 84.35L90.08 86.38L88.29 88.29L86.38 90.08L84.35 91.74L82.23 93.26L80 94.65L77.69 95.88L75.31 96.96L72.86 97.88L70.35 98.64L67.8 99.24L65.22 99.66L62.62 99.92L60.15 100L9 100L9 82L59.85 82L61.44 81.95L62.87 81.81L64.29 81.57L65.69 81.25L67.07 80.83L68.42 80.32L69.73 79.73L71 79.05L72.22 78.29L73.39 77.45L74.5 76.54L75.55 75.55L76.54 74.5L77.45 73.39L78.29 72.22L79.05 71L79.73 69.73L80.32 68.42L80.83 67.07L81.25 65.69L81.57 64.29L81.81 62.87L81.95 61.44L82 59.85L82 40.15L81.95 38.56L81.81 37.13L81.57 35.71L81.25 34.31L80.83 32.93L80.32 31.58L79.73 30.27L79.05 29L78.29 27.78L77.45 26.61L76.54 25.5L75.55 24.45L74.5 23.46L73.39 22.55L72.22 21.71L71 20.95L69.73 20.27L68.42 19.68L67.07 19.17L65.69 18.75L64.29 18.43L62.87 18.19L61.44 18.05L59.85 18L9 18ZM162 100L162 -0L180 -0L180 100ZM171 0L225.15 0L227.16 0.07L229.31 0.28L231.44 0.63L233.54 1.12L235.61 1.75L237.63 2.51L239.6 3.4L241.5 4.42L243.34 5.56L245.09 6.82L246.76 8.19L248.34 9.66L249.81 11.24L251.18 12.91L252.44 14.66L253.58 16.5L254.6 18.4L255.49 20.37L256.25 22.39L256.88 24.46L257.37 26.56L257.72 28.69L257.93 30.84L250.97 -0L248.26 -0L248.26 76.99L257.93 34.16L257.72 36.31L257.37 38.44L256.88 40.54L256.25 42.61L255.49 44.63L254.6 46.6L253.58 48.5L252.44 50.34L251.18 52.09L249.81 53.76L248.34 55.34L246.76 56.81L245.09 58.18L243.34 59.44L241.5 60.58L239.6 61.6L237.63 62.49L235.61 63.25L233.54 63.88L231.44 64.37L229.31 64.72L227.16 64.93L225.15 65L171 65L171 47L224.85 47L225.98 46.96L226.96 46.87L227.93 46.71L228.88 46.48L229.82 46.2L230.74 45.85L231.63 45.45L232.5 44.99L233.33 44.47L234.13 43.9L234.89 43.27L235.6 42.6L236.27 41.89L236.9 41.13L237.47 40.33L237.99 39.5L238.45 38.63L238.85 37.74L239.2 36.82L239.48 35.88L239.71 34.93L239.87 33.96L239.96 32.98L246.97 -0L249.74 -0L249.74 77.99L239.96 32.02L239.87 31.04L239.71 30.07L239.48 29.12L239.2 28.18L238.85 27.26L238.45 26.37L237.99 25.5L237.47 24.67L236.9 23.87L236.27 23.11L235.6 22.4L234.89 21.73L234.13 21.1L233.33 20.53L232.5 20.01L231.63 19.55L230.74 19.15L229.82 18.8L228.88 18.52L227.93 18.29L226.96 18.13L225.98 18.04L224.85 18L171 18ZM207.37 47L217 47L260.66 100L237.34 100L199.21 53.72ZM318 100L318 -0L336 -0L336 100ZM412.12 -0L462.12 100L442 100L392 -0ZM442 100L492 -0L512.12 -0L462.12 100ZM568.12 100L568.12 -0L586.12 -0L586.12 100ZM646.12 100L646.12 -0L666.54 -0L724.12 73.83L724.12 -0L742.12 -0L742.12 100L721.71 100L664.12 26.17L664.12 100ZM907.12 18L844.27 18L842.69 18.05L841.25 18.19L839.83 18.43L838.43 18.75L837.05 19.17L835.71 19.68L834.4 20.27L833.13 20.95L831.9 21.71L830.73 22.55L829.62 23.46L828.57 24.45L827.59 25.5L826.67 26.61L825.84 27.78L825.08 29L824.4 30.27L823.8 31.58L823.3 32.93L822.88 34.31L822.55 35.71L822.32 37.13L822.18 38.56L822.12 40.15L822.12 59.85L822.18 61.44L822.32 62.87L822.55 64.29L822.88 65.69L823.3 67.07L823.8 68.42L824.4 69.73L825.08 71L825.84 72.22L826.67 73.39L827.59 74.5L828.57 75.55L829.62 76.54L830.73 77.45L831.9 78.29L833.13 79.05L834.4 79.73L835.71 80.32L837.05 80.83L838.43 81.25L839.83 81.57L841.25 81.81L842.69 81.95L844.27 82L867.98 82L869.56 81.95L871 81.81L872.42 81.57L873.82 81.25L875.19 80.83L876.54 80.32L877.85 79.73L879.12 79.05L880.34 78.29L881.51 77.45L882.63 76.54L883.68 75.55L884.66 74.5L885.57 73.39L886.41 72.22L887.17 71L887.85 69.73L888.45 68.42L888.95 67.07L889.37 65.69L889.7 64.29L889.93 62.87L890.07 61.44L890.12 59.85L890.12 54L908.12 54L908.12 60.15L908.04 62.62L907.79 65.22L907.36 67.8L906.77 70.35L906.01 72.86L905.08 75.31L904 77.69L902.77 80L901.39 82.23L899.86 84.35L898.2 86.38L896.41 88.29L894.5 90.08L892.48 91.74L890.35 93.26L888.13 94.65L885.82 95.88L883.43 96.96L880.98 97.88L878.48 98.64L875.93 99.24L873.35 99.66L870.74 99.92L868.27 100L843.98 100L841.51 99.92L838.9 99.66L836.32 99.24L833.77 98.64L831.27 97.88L828.82 96.96L826.43 95.88L824.12 94.65L821.9 93.26L819.77 91.74L817.75 90.08L815.84 88.29L814.05 86.38L812.39 84.35L810.86 82.23L809.48 80L808.25 77.69L807.16 75.31L806.24 72.86L805.48 70.35L804.89 67.8L804.46 65.22L804.21 62.62L804.12 60.15L804.12 39.85L804.21 37.38L804.46 34.78L804.89 32.2L805.48 29.65L806.24 27.14L807.16 24.69L808.25 22.31L809.48 20L810.86 17.77L812.39 15.65L814.05 13.62L815.84 11.71L817.75 9.92L819.77 8.26L821.9 6.74L824.12 5.35L826.43 4.12L828.82 3.04L831.27 2.12L833.77 1.36L836.32 0.76L838.9 0.34L841.51 0.08L843.98 0L907.12 0ZM862.36 45L908.12 45L908.12 63L862.36 63ZM1059.12 100L1059.12 -0L1077.12 -0L1077.12 100ZM1137.12 100L1137.12 -0L1157.54 -0L1215.12 73.83L1215.12 -0L1233.12 -0L1233.12 100L1212.71 100L1155.12 26.17L1155.12 100ZM1386.62 18L1323.77 18L1322.87 18.03L1322.12 18.1L1321.38 18.23L1320.65 18.4L1319.93 18.61L1319.23 18.88L1318.54 19.19L1317.88 19.54L1317.24 19.94L1316.63 20.38L1316.05 20.86L1315.5 21.37L1314.98 21.92L1314.5 22.5L1314.07 23.11L1313.67 23.75L1313.31 24.42L1313 25.1L1312.74 25.8L1312.52 26.52L1312.35 27.26L1312.23 28L1312.15 28.75L1312.13 29.5L1312.15 30.25L1312.23 31L1312.35 31.74L1312.52 32.48L1312.74 33.2L1313 33.9L1313.31 34.58L1313.67 35.25L1314.07 35.89L1314.5 36.5L1314.98 37.08L1315.5 37.63L1316.05 38.14L1316.63 38.62L1317.24 39.06L1317.88 39.46L1318.54 39.81L1319.23 40.12L1319.93 40.39L1320.65 40.6L1321.38 40.77L1322.12 40.9L1322.87 40.97L1323.77 41L1358.77 41L1360.55 41.06L1362.48 41.25L1364.38 41.56L1366.26 42L1368.11 42.56L1369.92 43.24L1371.67 44.04L1373.38 44.95L1375.02 45.97L1376.59 47.09L1378.08 48.32L1379.49 49.64L1380.81 51.05L1382.03 52.54L1383.16 54.11L1384.18 55.75L1385.09 57.45L1385.88 59.21L1386.56 61.02L1387.12 62.86L1387.56 64.74L1387.88 66.65L1388.07 68.57L1388.13 70.5L1388.07 72.43L1387.88 74.35L1387.56 76.26L1387.12 78.14L1386.56 79.98L1385.88 81.79L1385.09 83.55L1384.18 85.25L1383.16 86.89L1382.03 88.46L1380.81 89.95L1379.49 91.36L1378.08 92.68L1376.59 93.91L1375.02 95.03L1373.38 96.05L1371.67 96.96L1369.92 97.76L1368.11 98.44L1366.26 99L1364.38 99.44L1362.48 99.75L1360.55 99.94L1358.77 100L1295.62 100L1295.62 82L1358.48 82L1359.38 81.97L1360.13 81.9L1360.87 81.77L1361.6 81.6L1362.32 81.39L1363.02 81.12L1363.71 80.81L1364.37 80.46L1365.01 80.06L1365.62 79.62L1366.2 79.14L1366.75 78.63L1367.27 78.08L1367.74 77.5L1368.18 76.89L1368.58 76.25L1368.93 75.58L1369.24 74.9L1369.51 74.2L1369.73 73.48L1369.9 72.74L1370.02 72L1370.1 71.25L1370.12 70.5L1370.1 69.75L1370.02 69L1369.9 68.26L1369.73 67.52L1369.51 66.8L1369.24 66.1L1368.93 65.42L1368.58 64.75L1368.18 64.11L1367.74 63.5L1367.27 62.92L1366.75 62.37L1366.2 61.86L1365.62 61.38L1365.01 60.94L1364.37 60.54L1363.71 60.19L1363.02 59.88L1362.32 59.61L1361.6 59.4L1360.87 59.23L1360.13 59.1L1359.38 59.03L1358.48 59L1323.48 59L1321.69 58.94L1319.77 58.75L1317.87 58.44L1315.99 58L1314.14 57.44L1312.33 56.76L1310.57 55.96L1308.87 55.05L1307.23 54.03L1305.66 52.91L1304.17 51.68L1302.76 50.36L1301.44 48.95L1300.22 47.46L1299.09 45.89L1298.07 44.25L1297.16 42.55L1296.37 40.79L1295.69 38.98L1295.13 37.14L1294.69 35.26L1294.37 33.35L1294.18 31.43L1294.12 29.5L1294.18 27.57L1294.37 25.65L1294.69 23.74L1295.13 21.86L1295.69 20.02L1296.37 18.21L1297.16 16.45L1298.07 14.75L1299.09 13.11L1300.22 11.54L1301.44 10.05L1302.76 8.64L1304.17 7.32L1305.66 6.09L1307.23 4.97L1308.87 3.95L1310.57 3.04L1312.33 2.24L1314.14 1.56L1315.99 1L1317.87 0.56L1319.77 0.25L1321.69 0.06L1323.48 0L1386.62 0ZM1446.12 0L1536.12 0L1536.12 18L1446.12 18ZM1482.12 100L1482.12 -0L1500.12 -0L1500.12 100ZM1593.12 100L1593.12 -0L1611.12 -0L1611.12 100ZM1602.12 0L1656.27 0L1658.28 0.07L1660.43 0.28L1662.56 0.63L1664.67 1.12L1666.73 1.75L1668.76 2.51L1670.72 3.4L1672.63 4.42L1674.46 5.56L1676.22 6.82L1677.89 8.19L1679.46 9.66L1680.94 11.24L1682.31 12.91L1683.57 14.66L1684.71 16.5L1685.73 18.4L1686.62 20.37L1687.38 22.39L1688 24.46L1688.5 26.56L1688.85 28.69L1689.06 30.84L1682.1 -0L1679.39 -0L1679.39 76.99L1689.06 34.16L1688.85 36.31L1688.5 38.44L1688 40.54L1687.38 42.61L1686.62 44.63L1685.73 46.6L1684.71 48.5L1683.57 50.34L1682.31 52.09L1680.94 53.76L1679.46 55.34L1677.89 56.81L1676.22 58.18L1674.46 59.44L1672.63 60.58L1670.72 61.6L1668.76 62.49L1666.73 63.25L1664.67 63.88L1662.56 64.37L1660.43 64.72L1658.28 64.93L1656.27 65L1602.12 65L1602.12 47L1655.98 47L1657.11 46.96L1658.08 46.87L1659.05 46.71L1660.01 46.48L1660.94 46.2L1661.86 45.85L1662.76 45.45L1663.62 44.99L1664.46 44.47L1665.25 43.9L1666.01 43.27L1666.73 42.6L1667.4 41.89L1668.02 41.13L1668.59 40.33L1669.11 39.5L1669.57 38.63L1669.98 37.74L1670.32 36.82L1670.61 35.88L1670.83 34.93L1670.99 33.96L1671.09 32.98L1678.1 -0L1680.86 -0L1680.86 77.99L1671.09 32.02L1670.99 31.04L1670.83 30.07L1670.61 29.12L1670.32 28.18L1669.98 27.26L1669.57 26.37L1669.11 25.5L1668.59 24.67L1668.02 23.87L1667.4 23.11L1666.73 22.4L1666.01 21.73L1665.25 21.1L1664.46 20.53L1663.62 20.01L1662.76 19.55L1661.86 19.15L1660.94 18.8L1660.01 18.52L1659.05 18.29L1658.08 18.13L1657.11 18.04L1655.98 18L1602.12 18ZM1638.5 47L1648.12 47L1691.79 100L1668.46 100L1630.34 53.72ZM1767.12 -0L1767.12 59.85L1767.18 61.44L1767.32 62.87L1767.55 64.29L1767.88 65.69L1768.3 67.07L1768.8 68.42L1769.4 69.73L1770.08 71L1770.84 72.22L1771.67 73.39L1772.59 74.5L1773.57 75.55L1774.62 76.54L1775.73 77.45L1776.9 78.29L1778.13 79.05L1779.4 79.73L1780.71 80.32L1782.05 80.83L1783.43 81.25L1784.83 81.57L1786.25 81.81L1787.69 81.95L1789.27 82L1804.98 82L1806.56 81.95L1808 81.81L1809.42 81.57L1810.82 81.25L1812.19 80.83L1813.54 80.32L1814.85 79.73L1816.12 79.05L1817.34 78.29L1818.51 77.45L1819.63 76.54L1820.68 75.55L1821.66 74.5L1822.57 73.39L1823.41 72.22L1824.17 71L1824.85 69.73L1825.45 68.42L1825.95 67.07L1826.37 65.69L1826.7 64.29L1826.93 62.87L1827.07 61.44L1827.12 59.85L1827.12 -0L1845.12 -0L1845.12 60.15L1845.04 62.62L1844.79 65.22L1844.36 67.8L1843.77 70.35L1843.01 72.86L1842.08 75.31L1841 77.69L1839.77 80L1838.39 82.23L1836.86 84.35L1835.2 86.38L1833.41 88.29L1831.5 90.08L1829.48 91.74L1827.35 93.26L1825.13 94.65L1822.82 95.88L1820.43 96.96L1817.98 97.88L1815.48 98.64L1812.93 99.24L1810.35 99.66L1807.74 99.92L1805.27 100L1788.98 100L1786.51 99.92L1783.9 99.66L1781.32 99.24L1778.77 98.64L1776.27 97.88L1773.82 96.96L1771.43 95.88L1769.12 94.65L1766.9 93.26L1764.77 91.74L1762.75 90.08L1760.84 88.29L1759.05 86.38L1757.39 84.35L1755.86 82.23L1754.48 80L1753.25 77.69L1752.16 75.31L1751.24 72.86L1750.48 70.35L1749.89 67.8L1749.46 65.22L1749.21 62.62L1749.12 60.15L1749.12 -0ZM2006.12 18L1947.27 18L1945.69 18.05L1944.25 18.19L1942.83 18.43L1941.43 18.75L1940.05 19.17L1938.71 19.68L1937.4 20.27L1936.13 20.95L1934.9 21.71L1933.73 22.55L1932.62 23.46L1931.57 24.45L1930.59 25.5L1929.67 26.61L1928.84 27.78L1928.08 29L1927.4 30.27L1926.8 31.58L1926.3 32.93L1925.88 34.31L1925.55 35.71L1925.32 37.13L1925.18 38.56L1925.12 40.15L1925.12 59.85L1925.18 61.44L1925.32 62.87L1925.55 64.29L1925.88 65.69L1926.3 67.07L1926.8 68.42L1927.4 69.73L1928.08 71L1928.84 72.22L1929.67 73.39L1930.59 74.5L1931.57 75.55L1932.62 76.54L1933.73 77.45L1934.9 78.29L1936.13 79.05L1937.4 79.73L1938.71 80.32L1940.05 80.83L1941.43 81.25L1942.83 81.57L1944.25 81.81L1945.69 81.95L1947.27 82L2006.12 82L2006.12 100L1946.98 100L1944.51 99.92L1941.9 99.66L1939.32 99.24L1936.77 98.64L1934.27 97.88L1931.82 96.96L1929.43 95.88L1927.12 94.65L1924.9 93.26L1922.77 91.74L1920.75 90.08L1918.84 88.29L1917.05 86.38L1915.39 84.35L1913.86 82.23L1912.48 80L1911.25 77.69L1910.16 75.31L1909.24 72.86L1908.48 70.35L1907.89 67.8L1907.46 65.22L1907.21 62.62L1907.12 60.15L1907.12 39.85L1907.21 37.38L1907.46 34.78L1907.89 32.2L1908.48 29.65L1909.24 27.14L1910.16 24.69L1911.25 22.31L1912.48 20L1913.86 17.77L1915.39 15.65L1917.05 13.62L1918.84 11.71L1920.75 9.92L1922.77 8.26L1924.9 6.74L1927.12 5.35L1929.43 4.12L1931.82 3.04L1934.27 2.12L1936.77 1.36L1939.32 0.76L1941.9 0.34L1944.51 0.08L1946.98 0L2006.12 0ZM2064.12 0L2154.12 0L2154.12 18L2064.12 18ZM2100.12 100L2100.12 -0L2118.12 -0L2118.12 100ZM2282.98 18L2284.56 18.05L2286 18.19L2287.42 18.43L2288.82 18.75L2290.19 19.17L2291.54 19.68L2292.85 20.27L2294.12 20.95L2295.34 21.71L2296.51 22.55L2297.63 23.46L2298.68 24.45L2299.66 25.5L2300.57 26.61L2301.41 27.78L2302.17 29L2302.85 30.27L2303.45 31.58L2303.95 32.93L2304.37 34.31L2304.7 35.71L2304.93 37.13L2305.07 38.56L2305.12 40.15L2305.12 59.85L2305.07 61.44L2304.93 62.87L2304.7 64.29L2304.37 65.69L2303.95 67.07L2303.45 68.42L2302.85 69.73L2302.17 71L2301.41 72.22L2300.57 73.39L2299.66 74.5L2298.68 75.55L2297.63 76.54L2296.51 77.45L2295.34 78.29L2294.12 79.05L2292.85 79.73L2291.54 80.32L2290.19 80.83L2288.82 81.25L2287.42 81.57L2286 81.81L2284.56 81.95L2282.98 82L2253.27 82L2251.69 81.95L2250.25 81.81L2248.83 81.57L2247.43 81.25L2246.05 80.83L2244.71 80.32L2243.4 79.73L2242.13 79.05L2240.9 78.29L2239.73 77.45L2238.62 76.54L2237.57 75.55L2236.59 74.5L2235.67 73.39L2234.84 72.22L2234.08 71L2233.4 69.73L2232.8 68.42L2232.3 67.07L2231.88 65.69L2231.55 64.29L2231.32 62.87L2231.18 61.44L2231.12 59.85L2231.12 40.15L2231.18 38.56L2231.32 37.13L2231.55 35.71L2231.88 34.31L2232.3 32.93L2232.8 31.58L2233.4 30.27L2234.08 29L2234.84 27.78L2235.67 26.61L2236.59 25.5L2237.57 24.45L2238.62 23.46L2239.73 22.55L2240.9 21.71L2242.13 20.95L2243.4 20.27L2244.71 19.68L2246.05 19.17L2247.43 18.75L2248.83 18.43L2250.25 18.19L2251.69 18.05L2253.27 18ZM2252.98 0L2250.51 0.08L2247.9 0.34L2245.32 0.76L2242.77 1.36L2240.27 2.12L2237.82 3.04L2235.43 4.12L2233.12 5.35L2230.9 6.74L2228.77 8.26L2226.75 9.92L2224.84 11.71L2223.05 13.62L2221.39 15.65L2219.86 17.77L2218.48 20L2217.25 22.31L2216.16 24.69L2215.24 27.14L2214.48 29.65L2213.89 32.2L2213.46 34.78L2213.21 37.38L2213.12 39.85L2213.12 60.15L2213.21 62.62L2213.46 65.22L2213.89 67.8L2214.48 70.35L2215.24 72.86L2216.16 75.31L2217.25 77.69L2218.48 80L2219.86 82.23L2221.39 84.35L2223.05 86.38L2224.84 88.29L2226.75 90.08L2228.77 91.74L2230.9 93.26L2233.12 94.65L2235.43 95.88L2237.82 96.96L2240.27 97.88L2242.77 98.64L2245.32 99.24L2247.9 99.66L2250.51 99.92L2252.98 100L2283.27 100L2285.74 99.92L2288.35 99.66L2290.93 99.24L2293.48 98.64L2295.98 97.88L2298.43 96.96L2300.82 95.88L2303.13 94.65L2305.35 93.26L2307.48 91.74L2309.5 90.08L2311.41 88.29L2313.2 86.38L2314.86 84.35L2316.39 82.23L2317.77 80L2319 77.69L2320.08 75.31L2321.01 72.86L2321.77 70.35L2322.36 67.8L2322.79 65.22L2323.04 62.62L2323.12 60.15L2323.12 39.85L2323.04 37.38L2322.79 34.78L2322.36 32.2L2321.77 29.65L2321.01 27.14L2320.08 24.69L2319 22.31L2317.77 20L2316.39 17.77L2314.86 15.65L2313.2 13.62L2311.41 11.71L2309.5 9.92L2307.48 8.26L2305.35 6.74L2303.13 5.35L2300.82 4.12L2298.43 3.04L2295.98 2.12L2293.48 1.36L2290.93 0.76L2288.35 0.34L2285.74 0.08L2283.27 0ZM2385.12 100L2385.12 -0L2403.12 -0L2403.12 100ZM2394.12 0L2448.27 0L2450.28 0.07L2452.43 0.28L2454.56 0.63L2456.67 1.12L2458.73 1.75L2460.76 2.51L2462.72 3.4L2464.63 4.42L2466.46 5.56L2468.22 6.82L2469.89 8.19L2471.46 9.66L2472.94 11.24L2474.31 12.91L2475.57 14.66L2476.71 16.5L2477.73 18.4L2478.62 20.37L2479.38 22.39L2480 24.46L2480.5 26.56L2480.85 28.69L2481.06 30.84L2474.1 -0L2471.39 -0L2471.39 76.99L2481.06 34.16L2480.85 36.31L2480.5 38.44L2480 40.54L2479.38 42.61L2478.62 44.63L2477.73 46.6L2476.71 48.5L2475.57 50.34L2474.31 52.09L2472.94 53.76L2471.46 55.34L2469.89 56.81L2468.22 58.18L2466.46 59.44L2464.63 60.58L2462.72 61.6L2460.76 62.49L2458.73 63.25L2456.67 63.88L2454.56 64.37L2452.43 64.72L2450.28 64.93L2448.27 65L2394.12 65L2394.12 47L2447.98 47L2449.11 46.96L2450.08 46.87L2451.05 46.71L2452.01 46.48L2452.94 46.2L2453.86 45.85L2454.76 45.45L2455.62 44.99L2456.46 44.47L2457.25 43.9L2458.01 43.27L2458.73 42.6L2459.4 41.89L2460.02 41.13L2460.59 40.33L2461.11 39.5L2461.57 38.63L2461.98 37.74L2462.32 36.82L2462.61 35.88L2462.83 34.93L2462.99 33.96L2463.09 32.98L2470.1 -0L2472.86 -0L2472.86 77.99L2463.09 32.02L2462.99 31.04L2462.83 30.07L2462.61 29.12L2462.32 28.18L2461.98 27.26L2461.57 26.37L2461.11 25.5L2460.59 24.67L2460.02 23.87L2459.4 23.11L2458.73 22.4L2458.01 21.73L2457.25 21.1L2456.46 20.53L2455.62 20.01L2454.76 19.55L2453.86 19.15L2452.94 18.8L2452.01 18.52L2451.05 18.29L2450.08 18.13L2449.11 18.04L2447.98 18L2394.12 18ZM2430.5 47L2440.12 47L2483.79 100L2460.46 100L2422.34 53.72Z"/></svg>
+        </a>
+        <p>Automatic driving lessons for learners and returning drivers across Liverpool.</p>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="#lessons">Lessons</a></li>
+          <li><a href="#first-lesson">First lesson</a></li>
+          <li><a href="#areas">Areas</a></li>
+          <li><a href="#instructors">Your instructor</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col wide">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+447982976744"><svg class="ci" aria-hidden="true"><use href="#i-phone"/></svg>+44 7982 976744</a></li>
+          <li><a href="https://wa.me/447982976744" target="_blank" rel="noopener"><svg class="ci" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a></li>
+          <li><a href="mailto:ahmed.dandoush123@gmail.com"><svg class="ci" aria-hidden="true"><use href="#i-mail"/></svg>ahmed.dandoush123@gmail.com</a></li>
+          <li><span><svg class="ci" aria-hidden="true"><use href="#i-clock"/></svg>Early mornings, evenings and weekends</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2>Follow</h2>
+        <ul>
+          <li><a href="https://www.instagram.com/ahmed.adi1l/" target="_blank" rel="noopener"><svg class="ci" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram <span class="handle">@ahmed.adi1l</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.tiktok.com/@ahmed.adi40" target="_blank" rel="noopener"><svg class="ci" aria-hidden="true"><use href="#i-tiktok"/></svg><span>TikTok <span class="handle">@ahmed.adi40</span></span><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-base">
+      <p>&copy; <span id="year">2026</span> Ahmad, Driving Instructor. All rights reserved.</p>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="action-bar" id="action-bar" aria-label="Quick contact">
+  <a class="btn btn-line" href="tel:+447982976744">Call</a>
+  <a class="btn" href="#book">Book a lesson<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ---- Hero load sequence: start once fonts and the car image are ready ---- */
+  var start = function () { root.classList.add('is-loaded'); };
+  var carImg = document.querySelector('[data-hero-car] img');
+  var imgReady = new Promise(function (r) { if (!carImg || carImg.complete) r(); else { carImg.addEventListener('load', r); carImg.addEventListener('error', r); } });
+  var fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  Promise.race([Promise.all([imgReady, fontsReady]), new Promise(function (r) { setTimeout(r, 1200); })]).then(start);
+
+  /* ---- Mobile navigation ---- */
+  var header = document.getElementById('header');
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  function setMenu(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('is-open', open);
+    header.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) { var first = nav.querySelector('a'); if (first) first.focus(); }
+  }
+  toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+  });
+  window.matchMedia('(min-width: 1025px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+
+  /* ---- Scroll-driven effects (one rAF loop, transforms only) ---- */
+  var heroCar = document.querySelector('[data-hero-car]');
+  var heroPlate = document.querySelector('[data-hero-plate]');
+  var parallax = Array.prototype.slice.call(document.querySelectorAll('[data-speed]'));
+  var route = document.querySelector('[data-route]');
+  var road = route && route.querySelector('.road');
+  var roadCar = route && route.querySelector('.road-car');
+  var lastY = window.scrollY, ticking = false;
+
+  function frame() {
+    ticking = false;
+    var y = window.scrollY, vh = window.innerHeight;
+
+    header.classList.toggle('is-scrolled', y > 10);
+    if (!nav.classList.contains('is-open')) header.classList.toggle('is-hidden', y > lastY && y > vh * .9);
+    lastY = y;
+
+    if (reduce.matches) return;
+
+    if (y < vh * 1.2) {
+      var k = Math.min(1, window.innerWidth / 1200); // gentler drift on small screens
+      heroCar.style.transform = 'translate3d(' + (y * .22 * k).toFixed(1) + 'px,' + (y * .04).toFixed(1) + 'px,0)';
+      heroPlate.style.transform = 'translate3d(0,' + (y * -.1).toFixed(1) + 'px,0)';
+    }
+    parallax.forEach(function (el) {
+      var r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var c = (r.top + r.height / 2) - vh / 2;
+      el.style.transform = 'translate3d(0,' + (c * -parseFloat(el.dataset.speed)).toFixed(1) + 'px,0)';
+    });
+    if (road && road.offsetParent) {
+      var rr = road.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (vh * .85 - rr.top) / (vh * .55)));
+      road.style.setProperty('--p', p.toFixed(3));
+      roadCar.style.setProperty('--x', ((rr.width - roadCar.getBoundingClientRect().width) * p).toFixed(1) + 'px');
+    }
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  if (reduce.matches && road) { road.style.setProperty('--p', 1); }
+  frame();
+
+  /* ---- Line drawings: measure each stroke so it can draw itself ---- */
+  document.querySelectorAll('[data-draw] path, [data-draw] circle').forEach(function (el) {
+    el.style.setProperty('--len', Math.ceil(el.getTotalLength() + 1));
+  });
+
+  /* ---- Reveals ---- */
+  if ('IntersectionObserver' in window) {
+    // Masked elements have no visible area until revealed, so their parent is observed instead
+    var targets = new Map();
+    var revealIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        targets.get(en.target).forEach(function (el) { el.classList.add('is-in'); });
+        revealIo.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    document.querySelectorAll('[data-reveal], [data-draw]').forEach(function (el) {
+      var t = el.dataset.reveal === 'mask' ? el.parentElement : el;
+      if (!targets.has(t)) { targets.set(t, []); revealIo.observe(t); }
+      targets.get(t).push(el);
+    });
+
+    /* Current section in navigation */
+    var links = Array.prototype.slice.call(document.querySelectorAll('.primary-nav ul a'));
+    var navIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + en.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['lessons', 'first-lesson', 'areas', 'instructors', 'contact'].forEach(function (id) { var s = document.getElementById(id); if (s) navIo.observe(s); });
+
+    /* Phone action bar: show after the hero, hide while the booking form is on screen */
+    var bar = document.getElementById('action-bar');
+    var heroVisible = true, formVisible = false;
+    var updateBar = function () { bar.classList.toggle('is-visible', !heroVisible && !formVisible); };
+    new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; updateBar(); }).observe(document.querySelector('.hero-ctas'));
+    new IntersectionObserver(function (e) { formVisible = e[0].isIntersecting; updateBar(); }).observe(document.getElementById('contact'));
+  } else {
+    document.querySelectorAll('[data-reveal], [data-draw]').forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+
+  /* ---- Lesson links prefill the form ---- */
+  var typeSelect = document.getElementById('f-type');
+  document.querySelectorAll('[data-lesson]').forEach(function (a) {
+    a.addEventListener('click', function () { typeSelect.value = a.dataset.lesson; });
+  });
+
+  /* ---- Placeholder links: keep the page from jumping to the top ---- */
+  document.querySelectorAll('a[data-placeholder]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+
+  /* ---- Enquiry form (front end only in this preview) ---- */
+  var form = document.getElementById('book');
+  var status = document.getElementById('form-status');
+  var required = [
+    { el: document.getElementById('f-name'), err: document.getElementById('f-name-err') },
+    { el: document.getElementById('f-phone'), err: document.getElementById('f-phone-err'), test: function (v) { return v.replace(/[^\d]/g, '').length >= 10; } },
+    { el: document.getElementById('f-postcode'), err: document.getElementById('f-postcode-err'), test: function (v) { return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v.trim()); } }
+  ];
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var firstBad = null;
+    required.forEach(function (f) {
+      var v = f.el.value.trim();
+      var ok = v.length > 0 && (!f.test || f.test(v));
+      f.el.setAttribute('aria-invalid', String(!ok));
+      f.err.hidden = ok;
+      if (!ok && !firstBad) firstBad = f.el;
+    });
+    if (firstBad) { status.hidden = true; firstBad.focus(); return; }
+    status.textContent = 'Thanks. This is a design preview, so your request has not been sent. Once the form is connected, this message will confirm that we have your details.';
+    status.hidden = false;
+  });
+  required.forEach(function (f) {
+    f.el.addEventListener('input', function () {
+      if (f.el.getAttribute('aria-invalid') === 'true') { f.el.removeAttribute('aria-invalid'); f.err.hidden = true; }
+    });
+  });
+
+  /* ---- Pass photo carousel: autoplay is driven by the timer bar's fill animation ---- */
+  var car = document.querySelector('[data-carousel]');
+  if (car) {
+    var stage = car.querySelector('.pass-stage');
+    var slides = [].slice.call(car.querySelectorAll('.pass-slide'));
+    var timer = car.querySelector('.pass-timer');
+    var cur = car.querySelector('[data-current]');
+    var n = slides.length, idx = 0, holds = { view: 1 }, x0 = null, swiped = false;
+    var pad2 = function (v) { return (v < 10 ? '0' : '') + v; };
+    var hold = function (why, on) {
+      if (on) holds[why] = 1; else delete holds[why];
+      car.classList.toggle('is-paused', Object.keys(holds).length > 0);
+    };
+    var render = function () {
+      slides.forEach(function (s, k) {
+        var d = k - idx;
+        if (d > n / 2) d -= n;
+        if (d < -n / 2) d += n;
+        var a = Math.abs(d);
+        s.style.setProperty('--d', d);
+        s.classList.toggle('is-active', d === 0);
+        s.classList.toggle('is-near', a === 1);
+        s.classList.toggle('is-far', a === 2);
+        s.classList.toggle('is-left', d < 0);
+        s.setAttribute('aria-hidden', d === 0 ? 'false' : 'true');
+        if (a <= 3) {                       /* load photos just before they come into view */
+          var img = s.querySelector('img[data-src]');
+          if (img) { img.src = img.getAttribute('data-src'); img.removeAttribute('data-src'); }
+        }
+      });
+      timer.classList.remove('is-running');
+      void timer.offsetWidth;               /* restart the fill animation */
+      timer.classList.add('is-running');
+      cur.textContent = pad2(idx + 1);
+    };
+    var go = function (i) { idx = (i + n) % n; render(); };
+
+    car.querySelector('[data-prev]').addEventListener('click', function () { go(idx - 1); });
+    car.querySelector('[data-next]').addEventListener('click', function () { go(idx + 1); });
+    slides.forEach(function (s, k) { s.addEventListener('click', function () { if (!swiped && k !== idx) go(k); }); });
+    timer.addEventListener('animationend', function () { go(idx + 1); });
+    stage.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(idx - 1); }
+    });
+
+    /* swipe / drag */
+    stage.addEventListener('pointerdown', function (e) { x0 = e.clientX; swiped = false; });
+    stage.addEventListener('pointerup', function (e) {
+      if (x0 === null) return;
+      var dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { swiped = true; go(dx < 0 ? idx + 1 : idx - 1); }
+    });
+    stage.addEventListener('pointercancel', function () { x0 = null; });
+
+    /* pause while hovered, focused, off screen or in a background tab */
+    car.addEventListener('mouseenter', function () { hold('hover', true); });
+    car.addEventListener('mouseleave', function () { hold('hover', false); });
+    car.addEventListener('focusin', function () { hold('focus', true); });
+    car.addEventListener('focusout', function (e) { if (!car.contains(e.relatedTarget)) hold('focus', false); });
+    document.addEventListener('visibilitychange', function () { hold('tab', document.hidden); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { hold('view', !en[0].isIntersecting); }, { threshold: .35 }).observe(car);
+    } else { hold('view', false); }
+
+    render();
+  }
+
+  var yr = document.getElementById('year');
+  if (yr) yr.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

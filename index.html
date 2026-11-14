@@ -732,6 +732,11 @@ fieldset.field { border: 0; margin: 0 0 1.25rem; padding: 0; min-width: 0; }
 .form-small { font-size: .875rem; color: var(--stone); margin: 1rem 0 0; }
 .form-status { margin: 1rem 0 0; padding: 1rem 1.1rem; background: var(--paper-2); border-radius: 12px; font-size: .95rem; }
 .form-status[hidden] { display: none; }
+.form-status.is-ok { background: rgba(31, 122, 77, .1); color: #145A38; }
+.form-status.is-error { background: rgba(196, 20, 43, .08); color: var(--red-deep); }
+.form-status a { color: inherit; font-weight: 700; }
+.form-card .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-card button[disabled] { opacity: .7; cursor: progress; }
 
 /* ===== Footer ===== */
 .site-footer { padding-block: clamp(4rem, 7vw, 6rem) 2rem; font-size: .97rem; }
@@ -1324,20 +1329,20 @@ figure:hover .frame img { transform: scale(1.035); }
           <div class="field">
             <label for="f-name">Your name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
-            <p class="error" id="f-name-err" hidden>Enter your name so we know who to ask for.</p>
+            <p class="error" id="f-name-err" hidden>Enter your name so I know who to ask for.</p>
           </div>
           <div class="field">
             <label for="f-phone">Phone number</label>
             <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-phone-err">
-            <p class="error" id="f-phone-err" hidden>Enter a phone number we can call you back on.</p>
+            <p class="error" id="f-phone-err" hidden>Enter a phone number I can call you back on.</p>
           </div>
         </div>
 
         <div class="field-row">
           <div class="field">
             <label for="f-postcode">Postcode</label>
-            <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" required aria-describedby="f-postcode-err">
-            <p class="error" id="f-postcode-err" hidden>Enter your postcode so we can check we cover your area.</p>
+            <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" placeholder="e.g. L20 3AB" required aria-describedby="f-postcode-err">
+            <p class="error" id="f-postcode-err" hidden>Enter your postcode so I can check I cover your area.</p>
           </div>
           <div class="field">
             <label for="f-type">Type of lesson</label>
@@ -1353,9 +1358,11 @@ figure:hover .frame img { transform: scale(1.035); }
 
 
         <div class="field">
-          <label for="f-msg">Anything we should know? <span class="hint">(optional)</span></label>
+          <label for="f-msg">Anything I should know? <span class="hint">(optional)</span></label>
           <textarea id="f-msg" name="message" rows="3"></textarea>
         </div>
+
+        <div class="hp" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
 
         <button class="btn" type="submit">Request a call back<svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></button>
         <p class="form-small">I&#8217;ll only use your details to contact you about lessons. Read the <a href="privacy.html">privacy policy</a>.</p>
@@ -1553,14 +1560,21 @@ figure:hover .frame img { transform: scale(1.035); }
     a.addEventListener('click', function (e) { e.preventDefault(); });
   });
 
-  /* ---- Enquiry form (front end only in this preview) ---- */
+  /* ---- Enquiry form: validated here, then emailed to Ahmad through FormSubmit ---- */
   var form = document.getElementById('book');
   var status = document.getElementById('form-status');
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/ahmed.dandoush123@gmail.com';
   var required = [
     { el: document.getElementById('f-name'), err: document.getElementById('f-name-err') },
     { el: document.getElementById('f-phone'), err: document.getElementById('f-phone-err'), test: function (v) { return v.replace(/[^\d]/g, '').length >= 10; } },
     { el: document.getElementById('f-postcode'), err: document.getElementById('f-postcode-err'), test: function (v) { return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v.trim()); } }
   ];
+  var say = function (kind, html) {
+    status.className = 'form-status ' + (kind ? 'is-' + kind : '');
+    status.innerHTML = html;
+    status.hidden = false;
+  };
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var firstBad = null;
@@ -1572,8 +1586,49 @@ figure:hover .frame img { transform: scale(1.035); }
       if (!ok && !firstBad) firstBad = f.el;
     });
     if (firstBad) { status.hidden = true; firstBad.focus(); return; }
-    status.textContent = 'Thanks. This is a design preview, so your request has not been sent. Once the form is connected, this message will confirm that we have your details.';
-    status.hidden = false;
+
+    var val = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ''; };
+    if (val('_honey')) return;                       /* a bot filled the hidden field */
+    var payload = {
+      name: val('name'),
+      phone: val('phone'),
+      postcode: val('postcode').toUpperCase(),
+      lesson_type: val('lesson_type'),
+      message: val('message') || '(none)',
+      _subject: 'New call-back request: ' + val('name'),
+      _template: 'table',
+      _captcha: 'false'
+    };
+    var label = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending\u2026';
+    say('', 'Sending your request\u2026');
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) {
+        if (!r.ok || String(d.success) === 'false') throw new Error(d.message || 'Request failed');
+      });
+    }).then(function () {
+      form.reset();
+      say('ok', 'Thank you, ' + payload.name.replace(/[<>&]/g, '') + '. Your request has been sent and I&#8217;ll call you back soon.');
+    }).catch(function (err) {
+      var why = String(err && err.message || '');
+      if (window.console) console.warn('Form not sent:', why);
+      if (location.protocol === 'file:') {
+        say('error', 'This page is open as a file on your computer, so the form can&#8217;t send. Open it through a web address (http:// or https://) to test it.');
+      } else if (/activat/i.test(why)) {
+        say('error', 'The form is almost ready: it still needs a one-time activation. FormSubmit has sent the activation link to the site owner&#8217;s email. Meanwhile, please call or WhatsApp me on <a href="tel:+447982976744">+44 7982 976744</a>.');
+      } else {
+        say('error', 'Sorry, your request couldn&#8217;t be sent just now. Please call or WhatsApp me on <a href="tel:+447982976744">+44 7982 976744</a>.');
+      }
+    }).then(function () {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = label;
+    });
   });
   required.forEach(function (f) {
     f.el.addEventListener('input', function () {

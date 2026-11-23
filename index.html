@@ -1331,12 +1331,12 @@ figure:hover .frame img { transform: scale(1.035); }
           <div class="field">
             <label for="f-name">Your name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
-            <p class="error" id="f-name-err" hidden>Enter your name so I know who to ask for.</p>
+            <p class="error" id="f-name-err" role="alert" hidden>Please enter your name so I know who to ask for.</p>
           </div>
           <div class="field">
             <label for="f-phone">Phone number</label>
             <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-phone-err">
-            <p class="error" id="f-phone-err" hidden>Enter a phone number I can call you back on.</p>
+            <p class="error" id="f-phone-err" role="alert" hidden>Please enter a phone number so I can call you back.</p>
           </div>
         </div>
 
@@ -1344,7 +1344,7 @@ figure:hover .frame img { transform: scale(1.035); }
           <div class="field">
             <label for="f-postcode">Postcode</label>
             <input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" placeholder="e.g. L20 3AB" required aria-describedby="f-postcode-err">
-            <p class="error" id="f-postcode-err" hidden>Enter your postcode so I can check I cover your area.</p>
+            <p class="error" id="f-postcode-err" role="alert" hidden>Please enter your postcode so I can check I cover your area.</p>
           </div>
           <div class="field">
             <label for="f-type">Type of lesson</label>
@@ -1567,11 +1567,30 @@ figure:hover .frame img { transform: scale(1.035); }
   var status = document.getElementById('form-status');
   var submitBtn = form.querySelector('button[type="submit"]');
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/ahmed.dandoush123@gmail.com';
+  /* Each field has one message for "left empty" and one for "filled in wrongly", so the
+     visitor always learns what to fix. */
   var required = [
-    { el: document.getElementById('f-name'), err: document.getElementById('f-name-err') },
-    { el: document.getElementById('f-phone'), err: document.getElementById('f-phone-err'), test: function (v) { return v.replace(/[^\d]/g, '').length >= 10; } },
-    { el: document.getElementById('f-postcode'), err: document.getElementById('f-postcode-err'), test: function (v) { return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v.trim()); } }
+    { el: document.getElementById('f-name'), err: document.getElementById('f-name-err'),
+      empty: 'Please enter your name so I know who to ask for.',
+      invalid: 'Please enter your full name, at least two letters.',
+      test: function (v) { return /[A-Za-zÀ-ɏ]{2}/.test(v); } },
+    { el: document.getElementById('f-phone'), err: document.getElementById('f-phone-err'),
+      empty: 'Please enter a phone number so I can call you back.',
+      invalid: 'That number doesn’t look right. Please use digits, e.g. 07700 900123.',
+      test: function (v) { return /^\+?\d{10,15}$/.test(v.replace(/[\s().-]/g, '')); } },
+    { el: document.getElementById('f-postcode'), err: document.getElementById('f-postcode-err'),
+      empty: 'Please enter your postcode so I can check I cover your area.',
+      invalid: 'Please enter a full postcode, e.g. L20 3AB.',
+      test: function (v) { return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(v); } }
   ];
+  var check = function (f, showEmpty) {
+    var v = f.el.value.trim();
+    var msg = !v ? (showEmpty ? f.empty : '') : (f.test && !f.test(v) ? f.invalid : '');
+    if (msg) f.err.textContent = msg;
+    f.el.setAttribute('aria-invalid', String(!!msg));
+    f.err.hidden = !msg;
+    return !msg && !!v;
+  };
   var say = function (kind, html) {
     status.className = 'form-status ' + (kind ? 'is-' + kind : '');
     status.innerHTML = html;
@@ -1581,11 +1600,7 @@ figure:hover .frame img { transform: scale(1.035); }
     e.preventDefault();
     var firstBad = null;
     required.forEach(function (f) {
-      var v = f.el.value.trim();
-      var ok = v.length > 0 && (!f.test || f.test(v));
-      f.el.setAttribute('aria-invalid', String(!ok));
-      f.err.hidden = ok;
-      if (!ok && !firstBad) firstBad = f.el;
+      if (!check(f, true) && !firstBad) firstBad = f.el;
     });
     if (firstBad) { status.hidden = true; firstBad.focus(); return; }
 
@@ -1622,8 +1637,6 @@ figure:hover .frame img { transform: scale(1.035); }
       if (window.console) console.warn('Form not sent:', why);
       if (location.protocol === 'file:') {
         say('error', 'This page is open as a file on your computer, so the form can&#8217;t send. Open it through a web address (http:// or https://) to test it.');
-      } else if (/activat/i.test(why)) {
-        say('error', 'The form is almost ready: it still needs a one-time activation. FormSubmit has sent the activation link to the site owner&#8217;s email. Meanwhile, please call or WhatsApp me on <a href="tel:+447982976744">+44 7982 976744</a>.');
       } else {
         say('error', 'Sorry, your request couldn&#8217;t be sent just now. Please call or WhatsApp me on <a href="tel:+447982976744">+44 7982 976744</a>.');
       }
@@ -1633,6 +1646,9 @@ figure:hover .frame img { transform: scale(1.035); }
     });
   });
   required.forEach(function (f) {
+    /* Leaving a field with something wrong in it flags it straight away; an empty field is
+       only flagged on submit. Typing clears the message until the next check. */
+    f.el.addEventListener('blur', function () { if (f.el.value.trim()) check(f, false); });
     f.el.addEventListener('input', function () {
       if (f.el.getAttribute('aria-invalid') === 'true') { f.el.removeAttribute('aria-invalid'); f.err.hidden = true; }
     });
